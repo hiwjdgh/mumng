@@ -1,0 +1,45 @@
+@each $size, $value in $border-radius-values {
+    .bdrd-#{$size} {
+      @include border-radius($value);
+    }
+  }
+@each $size, $value in $border-radius-values {
+    .bdrdt-#{$size} {
+      @include border-top-radius($value, $value);
+    }
+  }
+@each $size, $value in $border-radius-values {
+    .bdrdr-#{$size} {
+      @include border-right-radius($value, $value);
+    }
+  }
+@each $size, $value in $border-radius-values {
+    .bdrdb-#{$size} {
+      @include border-bottom-radius($value, $value);
+    }
+  }
+@each $size, $value in $border-radius-values {
+    .bdrdl-#{$size} {
+      @include border-left-radius($value, $value);
+    }
+  }
+@each $size, $value in $border-radius-values {
+    .bdrdtl-#{$size} {
+      @include border-top-left-radius($value);
+    }
+  }
+@each $size, $value in $border-radius-values {
+    .bdrdtr-#{$size} {
+      @include border-top-right-radius($value);
+    }
+  }
+@each $size, $value in $border-radius-values {
+    .bdrdbl-#{$size} {
+      @include border-bottom-left-radius($value);
+    }
+  }
+@each $size, $value in $border-radius-values {
+    .bdrdbr-#{$size} {
+      @include border-bottom-right-radius($value);
+    }
+  }

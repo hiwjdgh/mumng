@@ -1,0 +1,110 @@
+@import "../../../../root/css/scss/variables";
+@import "../../../../root/css/scss/mixins";
+.notify-item{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $gray-4;
+
+    &:first-child{
+        border-top: 1px solid $gray-4;
+    }
+    
+    
+    &__empty{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+        padding: 48px 0;
+
+        &-text{
+            line-height: 24px;
+            font-weight: $font-weight-medium;
+            color: $gray-6;
+            font-size: $font-size-normal;
+        }
+    }
+
+    &__user,
+    &__work,
+    &__subscribe,
+    &__pay,
+    &__charge,
+    &__mumng,
+    &__commerce{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 16px 8px;
+        box-sizing: border-box;
+
+        
+        &-link{
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+
+        &-img{
+            align-self: flex-start;
+            width: 32px;
+            height: 32px;
+            border: 1px solid $gray-4;
+            border-radius: 50%;
+            box-sizing: border-box;
+            margin-right: 10px;
+        }
+
+        &-inner-box{
+            flex: 1;
+            margin-right: 8px;
+        }
+
+        &-name{
+            line-height: 20px;
+            font-weight: $font-weight-bold;
+            color: $gray-12;
+            font-size: $font-size-small;
+        }
+
+        &-content{
+            line-height: 20px;
+            font-weight: $font-weight-regular;
+            color: $gray-12;
+            font-size: $font-size-small;
+            margin-right: 6px;
+        }
+
+        &-dt{
+            line-height: 18px;
+            font-weight: $font-weight-regular;
+            color: $gray-7;
+            font-size: $font-size-xsmall;
+        }
+
+
+        &-follow-button{
+        }
+
+        &-link2{
+          
+        }
+
+        &-img2{
+            width: 40px;
+            height: 40px;
+        }
+
+        &-link3{
+          
+        }
+
+        &-img3{
+            width: 40px;
+            height: 50px;
+        }
+    }
+}

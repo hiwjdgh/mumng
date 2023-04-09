@@ -1,0 +1,272 @@
+.dropdown-box{
+    position: fixed;
+    /* top: 100%;
+    left: 0; */
+    display: none;
+    z-index: 999;
+
+    &.bottom{
+        top: auto;
+        bottom: 100%;
+    }
+    
+    &.right{
+        left: auto;
+        right: 0;
+    }
+
+    .dropdown-box__dropdown{
+        &:focus{
+            background-color: red;
+        }
+    }
+}
+
+
+.user-dropdown{
+    &__single{
+        display: flex;
+        align-items: center;
+        
+        &-img{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px solid $gray-4;
+            box-sizing: border-box;
+            position: relative;
+            margin-right: 4px;
+        }
+
+        &-nick{
+            line-height: 18px;
+            font-weight: $font-weight-regular;
+            color: $gray-10;
+            font-size: $font-size-xsmall;
+        }
+    }
+
+    &__button{
+        display: flex;
+        align-items: center;
+        align-self: flex-start;
+    }
+
+    &__img-box{
+        display: flex;
+        align-items: center;
+        direction: rtl;  /* This is to get the stack with left on top */
+        padding-left: 10px;  /* Same value as the negative margin */
+        margin-right: 4px;
+    }
+
+    &__img{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid $gray-4;
+        box-sizing: border-box;
+        position: relative;
+        margin-left: -10px;
+        z-index: 1;
+    }
+
+    &__text{
+        line-height: 18px;
+        font-weight: $font-weight-regular;
+        color: $gray-10;
+        font-size: $font-size-xsmall;
+        margin-right: 4px;
+    }
+
+    &__content{
+        display: flex;
+        width: 290px;
+        flex-direction: column;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid $gray-4;
+        border-radius: 6px;
+        background-color: $white;
+        @include box-shadow(3px 3px 6px 0px transparentize($color: #000000, $amount: 0.85));
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        max-height: 142px;
+        overflow-y: auto;
+        gap:12px 0;
+    }
+
+    &__item{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-link-box{
+            display: flex;
+            align-items: center;
+        }
+
+        &-img{
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 1px solid $gray-4;
+            border-radius: 50%;
+            box-sizing: border-box;
+            margin-right: 6px;
+        }
+
+        &-nick-box{
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-nick{
+            line-height: 18px;
+            font-weight: $font-weight-regular;
+            color: $gray-10;
+            font-size: $font-size-xsmall;
+        }
+
+        &-field{
+            line-height: 15px;
+            font-weight: $font-weight-regular;
+            color: $gray-7;
+            font-size: $font-size-2xsmall;
+        }
+    }
+
+
+    &--work-detail{
+        .user-dropdown__single{
+
+            .user-dropdown__single-box{
+                display: flex;
+                flex-direction: column;
+            }
+
+            .user-dropdown__single-img{
+                width: 40px;
+                height: 40px;
+                border: 1px solid $gray-4;
+                box-sizing: border-box;
+                border-radius: 50%;
+                margin-right: 12px;
+            }
+    
+            .user-dropdown__single-nick{
+                line-height: 18px;
+                font-weight: $font-weight-regular;
+                color: $gray-10;
+                font-size: $font-size-xsmall;
+            }
+
+            
+            .user-dropdown__single-field{
+                line-height: 20px;
+                font-weight: $font-weight-regular;
+                color: $gray-7;
+                font-size: $font-size-small;
+            }
+        }
+
+                    
+        .user-dropdown__button{
+            display: flex;
+            align-items: center;
+            align-self: flex-start;
+        }
+
+        .user-dropdown__img-box{
+            display: flex;
+            align-items: center;
+            direction: rtl;  /* This is to get the stack with left on top */
+            padding-left: 20px;  /* Same value as the negative margin */
+            margin-right: 12px;
+        }
+
+        .user-dropdown__img{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid $gray-4;
+            box-sizing: border-box;
+            position: relative;
+            margin-left: -20px;
+            z-index: 1;
+        }
+
+        .user-dropdown__text{
+            line-height: 24px;
+            font-weight: $font-weight-bold;
+            color: $gray-11;
+            font-size: $font-size-normal;
+            margin-right: 4px;
+        }
+
+        .user-dropdown__content{
+            display: flex;
+            width: 290px;
+            flex-direction: column;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid $gray-4;
+            border-radius: 6px;
+            background-color: $white;
+            @include box-shadow(3px 3px 6px 0px transparentize($color: #000000, $amount: 0.85));
+        }
+
+        .user-dropdown__list{
+            display: flex;
+            flex-direction: column;
+            max-height: 142px;
+            overflow-y: auto;
+            gap:12px 0;
+        }
+
+        .user-dropdown__item{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .user-dropdown__item-link-box{
+                display: flex;
+                align-items: center;
+            }
+
+            .user-dropdown__item-img{
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                border: 1px solid $gray-4;
+                border-radius: 50%;
+                box-sizing: border-box;
+                margin-right: 6px;
+            }
+
+            .user-dropdown__item-nick-box{
+                display: flex;
+                flex-direction: column;
+            }
+
+            .user-dropdown__item-nick{
+                line-height: 18px;
+                font-weight: $font-weight-regular;
+                color: $gray-10;
+                font-size: $font-size-xsmall;
+            }
+
+            .user-dropdown__item-field{
+                line-height: 15px;
+                font-weight: $font-weight-regular;
+                color: $gray-7;
+                font-size: $font-size-2xsmall;
+            }
+        }
+    }
+   
+
+}

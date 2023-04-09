@@ -1,0 +1,29 @@
+@mixin padding($vt-px, $hz-px) {
+    padding: $vt-px $hz-px;
+}
+
+@mixin padding-top($t-px) {
+    padding-top: $t-px;
+}
+
+@mixin padding-right($r-px) {
+    padding-right: $r-px;
+}
+
+@mixin padding-bottom($b-px) {
+    padding-bottom: $b-px;
+}
+
+@mixin padding-left($l-px) {
+    padding-left: $l-px;
+}
+
+@mixin padding-vt($t-px, $b-px) {
+    padding-top: $t-px;
+    padding-bottom: $b-px;
+}
+
+@mixin padding-hz($l-px, $r-px) {
+    padding-left: $l-px;
+    padding-right: $r-px;
+}

@@ -1,0 +1,108 @@
+.search-form{
+    display: flex;
+    width: 400px;
+    height: 32px;
+
+    .search-form__input{
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 6px 40px;
+        border-radius: 23px;
+        border: 1px solid $gray-4;
+        @include background($gray-2, "/root/img/icon_search_16px.png", no-repeat, 12px, center, 16px);
+        box-sizing: border-box;
+        font-size: $font-size-small;
+        color: $gray-12;
+        &:active,
+        &:focus,
+        &:hover{
+            border: 1px solid $gray-5;
+        }
+
+        &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: $gray-6;
+        opacity: 1; /* Firefox */
+        }
+          
+        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: $gray-6;
+        }
+        
+        &::-ms-input-placeholder { /* Microsoft Edge */
+        color: $gray-6;
+        }
+    }
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+
+    .form-group__label{
+        line-height: 24px;
+        font-weight: $font-weight-medium;
+        color: $gray-10;
+        font-size: $font-size-normal;
+        margin-bottom: 12px;
+    }
+
+    .form-group__box{
+
+    }
+
+    .form-group__description{
+        width: 100%;
+        margin-top: 6px;
+        line-height: 16px;
+        font-weight: $font-weight-regular;
+        color: $gray-7;
+        font-size: $font-size-xsmall;
+    }
+
+    
+    &.horizontal{
+        flex-wrap: wrap;
+        flex-direction: row;
+
+        .form-group__label{
+            width: 200px;
+            margin-bottom: 0;
+        }
+    
+        .form-group__box{
+            flex: 1;
+        }
+
+    }
+}
+
+.form-group2{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .form-group2__label{
+        flex: 1;
+        line-height: 24px;
+        font-weight: $font-weight-medium;
+        color: $gray-10;
+        font-size: $font-size-normal;
+        margin-bottom: 6px;
+    }
+
+    .form_group2__action{
+        margin-left: auto;
+
+    }
+
+    .form_group2__description{
+        display: block;
+        width: 100%;
+        line-height: 24px;
+        font-weight: $font-weight-regular;
+        color: $gray-7;
+        font-size: $font-size-small;
+    }
+}
+

@@ -1,0 +1,10 @@
+@mixin gap($gap-px) {
+  gap: $gap-px;
+}
+@mixin gap-row($row-px) {
+  row-gap: $row-px;
+}
+
+@mixin gap-column($column-px) {
+  column-gap: $column-px;
+}

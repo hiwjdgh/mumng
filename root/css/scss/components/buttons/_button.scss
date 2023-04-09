@@ -1,0 +1,234 @@
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0 8px;
+    
+    &--vertical{
+        flex-direction: column;
+        gap: 12px 0;
+    }
+}
+.button{
+    &-s1{
+        width: 100%;
+        border-radius: 24px;
+        padding: 10px 16px;
+        line-height: 24px;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-normal;
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    &-s2{
+        min-width: 100px;
+        border-radius: 23px;
+        padding: 6px 16px;
+        line-height: 20px;
+        font-weight: $font-weight-medium;
+        font-size: $font-size-small;
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    &-s3{
+        min-width: 71px;
+        border-radius: 23px;
+        padding: 6px 10px;
+        line-height: 20px;
+        font-weight: $font-weight-medium;
+        font-size: $font-size-small;
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    &-s4{
+        min-width: 52px;
+        height: 20px;
+        border-radius: 10px;
+        padding: 2px 12px;
+        line-height: 15px;
+        font-weight: $font-weight-medium;
+        font-size: $font-size-2xsmall;
+        white-space: nowrap;
+        text-align: center;
+    }
+}
+
+.button-t1{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: $gray-11;
+    border: 1px solid $gray-11;
+    color: $white;
+    outline: none;
+    vertical-align: middle;
+    cursor: pointer;
+    text-align: center;
+
+    &.disabled{
+        cursor: default;
+        background-color: $gray-4;
+        border-color: $gray-4;
+        color: $gray-5;
+    }
+}
+
+.button-t2{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: $white;
+    border: 1px solid $gray-4;
+    color: $gray-11;
+    outline: none;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 24px;
+    text-align: center;
+    transition: all 0.2s;
+
+    &.disabled{
+        pointer-events: none;
+        color: $gray-4;
+    }
+
+    &:not(.disabled):hover{
+        border-color: $gray-5;
+        color: $gray-12;
+        background-color: $gray-1;
+    }
+}
+
+.button-t3{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: $white;
+    border: 1px solid $gray-4;
+    color: $gray-7;
+    outline: none;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 24px;
+    text-align: center;
+    transition: all 0.2s;
+
+    &.disabled{
+        pointer-events: none;
+        color: $gray-4;
+    }
+
+    &:not(.disabled):hover{
+        border-color: $gray-5;
+        color: $gray-8;
+        background-color: $gray-1;
+    }
+}
+
+.icon-button{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    vertical-align: middle;
+    &-circle{
+        box-sizing: border-box;
+        border: 1px solid $gray-4;
+        border-radius: 50%;
+    }
+
+    &-16{
+        width: 16px;
+        height: 16px;
+    }
+
+    &-20{
+        width: 20px;
+        height: 20px;
+    }
+    &-28{
+        width: 28px;
+        height: 28px;
+    }
+    &-32{
+        width: 32px;
+        height: 32px;
+    }
+    &-36{
+        width: 36px;
+        height: 36px;
+    }
+    &-40{
+        width: 40px;
+        height: 40px;
+    }
+
+    &-48{
+        width: 48px;
+        height: 48px;
+    }
+
+}
+
+.ic-button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+    &-16{
+        width: 16px;
+        height: 16px;
+    }
+
+    &-20{
+        width: 20px;
+        height: 20px;
+    }
+
+    &-28{
+        width: 28px;
+        height: 28px;
+    }
+
+    &-32{
+        width: 32px;
+        height: 32px;
+    }
+
+    &-36{
+        width: 36px;
+        height: 36px;
+    }
+    
+    &-40{
+        width: 40px;
+        height: 40px;
+    }
+
+    &-48{
+        width: 48px;
+        height: 48px;
+    }
+
+
+    &.round{
+        border: 1px solid $gray-4;
+        border-radius: 50%;
+        transition: all 0.2s;
+
+        &:hover{
+            border-color: $gray-5;
+        }
+    }
+}

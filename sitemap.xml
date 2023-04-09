@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+    <loc>https://www.mumng.com/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+    </url>
+
+    <url>
+    <loc>https://www.mumng.com/work/list</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+    </url>
+
+    <url>
+    <loc>https://www.mumng.com/plan/home</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+    </url>
+
+    <!-- 검색 시작 -->
+    <url>
+    <loc>https://www.mumng.com/search/webtoon</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+    </url>
+    <url>
+    <loc>https://www.mumng.com/search/user</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+    </url>
+    <url>
+    <loc>https://www.mumng.com/search/hashtag</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.80</priority>
+    </url>
+    <!-- 검색 끝 -->
+
+    <!-- 이용약관 시작 -->
+    <url>
+    <loc>https://www.mumng.com/legal/service</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.64</priority>
+    </url>
+    <url>
+    <loc>https://www.mumng.com/legal/commerce</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.64</priority>
+    </url>
+    <url>
+    <loc>https://www.mumng.com/legal/privacy</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.64</priority>
+    </url>
+    <url>
+    <loc>https://www.mumng.com/legal/charge</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.64</priority>
+    </url>
+    <!-- 이용약관 끝 -->
+
+    <!-- 가이드 시작 -->
+    <url>
+    <loc>https://www.mumng.com/guide/home</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.64</priority>
+    </url>
+    <url>
+    <loc>https://www.mumng.com/guide/group/upload</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.51</priority>
+    </url>
+    <url>
+    <loc>https://www.mumng.com/guide/board/upload/work</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.41</priority>
+    </url>
+    <url>
+    <loc>https://www.mumng.com/guide/board/upload/epsd</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.41</priority>
+    </url>
+    <!-- 가이드 끝 -->
+
+    <!-- 도움말 시작 -->
+    <url>
+    <loc>https://www.mumng.com/help/home</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.64</priority>
+    </url>
+    <url>
+    <loc>https://www.mumng.com/help/service</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.64</priority>
+    </url>
+    <!-- 도움말 끝 -->
+
+</urlset>

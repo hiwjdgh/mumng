@@ -1,0 +1,45 @@
+@each $color, $value1 in $border-color-values {
+    @each $style, $value2 in $border-style-values {
+        @each $width, $value3 in $border-width-values {
+            .bd-#{$width}-#{$style}-#{$color} {
+                @include border($value3, $value2, $value1);
+            }
+        }
+    }
+}
+@each $color, $value1 in $border-color-values {
+    @each $style, $value2 in $border-style-values {
+        @each $width, $value3 in $border-width-values {
+            .bdt-#{$width}-#{$style}-#{$color} {
+                @include border-top($value3, $value2, $value1);
+            }
+        }
+    }
+}
+@each $color, $value1 in $border-color-values {
+    @each $style, $value2 in $border-style-values {
+        @each $width, $value3 in $border-width-values {
+            .bdr-#{$width}-#{$style}-#{$color} {
+                @include border-right($value3, $value2, $value1);
+            }
+        }
+    }
+}
+@each $color, $value1 in $border-color-values {
+    @each $style, $value2 in $border-style-values {
+        @each $width, $value3 in $border-width-values {
+            .bdb-#{$width}-#{$style}-#{$color} {
+                @include border-bottom($value3, $value2, $value1);
+            }
+        }
+    }
+}
+@each $color, $value1 in $border-color-values {
+    @each $style, $value2 in $border-style-values {
+        @each $width, $value3 in $border-width-values {
+            .bdl-#{$width}-#{$style}-#{$color} {
+                @include border-left($value3, $value2, $value1);
+            }
+        }
+    }
+}

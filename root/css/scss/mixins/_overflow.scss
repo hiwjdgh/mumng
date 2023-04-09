@@ -1,0 +1,11 @@
+@mixin overflow($value) {
+    overflow: $value;
+}
+
+@mixin overflow-vt($value) {
+    overflow-y: $value;
+}
+
+@mixin overflow-hz($value) {
+    overflow-x: $value;
+}

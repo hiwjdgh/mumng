@@ -1,0 +1,52 @@
+@import "../../../root/css/scss/variables";
+@import "../../../root/css/scss/mixins";
+/* 발견 페이지 */
+.sight{
+    &-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 1920px;
+        min-height: 100%;
+        margin: 0 auto;
+        padding: 102px 34px 56px 34px;
+        box-sizing: border-box;
+    }
+
+
+    &-header{
+        display: flex;
+        width: 100%;
+        margin-bottom: 24px;
+
+        &__filter{
+            display: flex;
+            align-items: center;
+            gap: 0 20px;
+
+            &-item{
+                line-height: 42px;
+                font-weight: $font-weight-bold;
+                color: $gray-5;
+                font-size: $font-size-5xlarge;
+                transition: color 0.2s;
+                cursor: pointer;
+    
+                &:hover{
+                    color: $gray-6;
+                }
+                
+                &.current{
+                    color: $gray-12;
+                }
+            }
+        }
+    }
+
+    &-list{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 18px;
+    }
+}

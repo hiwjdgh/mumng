@@ -1,0 +1,879 @@
+.icon-8{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-size: 8px;
+    vertical-align: middle;
+}
+.icon-10{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-size: 10px;
+    vertical-align: middle;
+}
+.icon-12{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-size: 12px;
+    vertical-align: middle;
+}
+.icon-16{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-size: 16px;
+    vertical-align: middle;
+}
+.icon-20{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: 20px;
+    vertical-align: middle;
+}
+.icon-22{
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background-size: 22px;
+    vertical-align: middle;
+}
+.icon-24{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: 24px;
+    vertical-align: middle;
+}
+
+.icon-24x36{
+    display: inline-block;
+    width: 24px;
+    height: 36px;
+    background-size: 24px;
+    vertical-align: middle;
+}
+.icon-28{
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-size: 28px;
+    vertical-align: middle;
+}
+.icon-30x13{
+    display: inline-block;
+    width: 30px;
+    height: 13px;
+    background-size: 30px;
+    vertical-align: middle;
+}
+.icon-30{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-size: 30px;
+    vertical-align: middle;
+}
+.icon-32{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-size: 32px;
+    vertical-align: middle;
+}
+.icon-36{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background-size: 36px;
+    vertical-align: middle;
+}
+
+.icon-40{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-size: 40px;
+    vertical-align: middle;
+}
+
+.icon-36x26{
+    display: inline-block;
+    width: 36px;
+    height: 26px;
+    background-size: 36px;
+    vertical-align: middle;
+}
+.icon-64{
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    background-size: 64px;
+    vertical-align: middle;
+}
+.icon-65{
+    display: inline-block;
+    width: 65px;
+    height: 65px;
+    background-size: 65px;
+    vertical-align: middle;
+}
+
+.icon-like{
+    &--inactive{
+        &.icon-8{
+            background-image: url(/root/img/icon_like_inactive_16px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        &.icon-16{
+            background-image: url(/root/img/icon_like_inactive_16px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        &.icon-20{
+            background-image: url(/root/img/icon_like_inactive_20px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    &--active{
+        &.icon-8{
+            background-image: url(/root/img/icon_like_active_16px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        &.icon-16{
+            background-image: url(/root/img/icon_like_active_16px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        &.icon-20{
+            background-image: url(/root/img/icon_like_active_20px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
+
+.icon-save{
+    &.icon-20{
+        background-image: url(/root/img/icon_save_20px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.icon-subscribe{
+    &.icon-inactive{
+       /*  &.icon-16{ 아직없음
+            background-image: url(/root/img/icon_subscribe_inactive_16px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        } */
+        &.icon-20{
+            background-image: url(/root/img/icon_subscribe_inactive_20px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        &.icon-30{
+            background-image: url(/root/img/icon_subscribe_inactive_30px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    &.icon-active{
+        &.icon-16{
+            background-image: url(/root/img/icon_subscribe_active_16px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        &.icon-20{
+            background-image: url(/root/img/icon_subscribe_active_20px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        &.icon-30{
+            background-image: url(/root/img/icon_subscribe_active_30px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
+
+.icon-more{
+    &.icon-24{
+        background-image: url(/root/img/icon_more_24px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &.icon-inactive{
+         &.icon-30{
+             background-image: url(/root/img/icon_more_inactive_30px.png);
+             background-repeat: no-repeat;
+             background-position: center;
+         }
+     }
+     &.icon-active{
+         &.icon-30{
+             background-image: url(/root/img/icon_more_active_30px.png);
+             background-repeat: no-repeat;
+             background-position: center;
+         }
+     }
+}
+
+.icon-preview{
+    &.icon-24{
+        background-image: url(/root/img/icon_preview_24px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.icon-plus{
+    &.icon-16{
+        background-image: url(/root/img/icon_plus_16px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &.icon-20{
+        background-image: url(/root/img/icon_plus_20px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &.icon-24{
+        background-image: url(/root/img/icon_plus_24px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.icon-white-plus{
+    &.icon-24{
+        background-image: url(/root/img/icon_white_plus_24px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &.icon-64{
+        background-image: url(/root/img/icon_white_plus_64px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+
+.icon-search{
+    &.icon-16{
+        background-image: url(/root/img/icon_search_16px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &.icon-inactive{
+        &.icon-30{
+            background-image: url(/root/img/icon_search_inactive_30px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    &.icon-active{
+        &.icon-30{
+            background-image: url(/root/img/icon_search_active_30px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+       
+    }
+}
+
+.icon-help{
+    &.icon-12{
+        background-image: url(/root/img/icon_help_12px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.icon-update{
+    &.icon-16{
+        background-image: url(/root/img/icon_update_16px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &.icon-32{
+        background-image: url(/root/img/icon_update_32px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.icon-setting{
+    &.icon-20{
+        background-image: url(/root/img/icon_setting_20px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.icon-x{
+    &.icon-16{
+        background-image: url(/root/img/icon_x_16px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &.icon-20{
+        background-image: url(/root/img/icon_x_20px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &.icon-24{
+        background-image: url(/root/img/icon_x_24px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &.icon-28{
+        background-image: url(/root/img/icon_x_28px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.icon-x-white{
+    &.icon-16{
+        background-image: url(/root/img/icon_x_white_16px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.icon-facebook{
+    &.icon-inactive{
+        &.icon-24{
+            background-image: url(/root/img/icon_facebook_inactive_24px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    &.icon-active{
+        &.icon-22{
+            background-image: url(/root/img/icon_facebook_active_22px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        &.icon-24{
+            background-image: url(/root/img/icon_facebook_active_24px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+       
+    }
+}
+
+.icon-instagram{
+    &.icon-inactive{
+        &.icon-24{
+            background-image: url(/root/img/icon_instagram_inactive_24px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    &.icon-active{
+        &.icon-22{
+            background-image: url(/root/img/icon_instagram_active_22px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        &.icon-24{
+            background-image: url(/root/img/icon_instagram_active_24px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
+
+.icon-naver{
+    &.icon-inactive{
+        &.icon-24{
+            background-image: url(/root/img/icon_naver_inactive_24px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    &.icon-active{
+        &.icon-22{
+            background-image: url(/root/img/icon_naver_active_22px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        &.icon-24{
+            background-image: url(/root/img/icon_naver_active_24px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+}
+
+.icon-twitter{
+    &.icon-inactive{
+        &.icon-24{
+            background-image: url(/root/img/icon_twitter_inactive_24px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    &.icon-active{
+        &.icon-22{
+            background-image: url(/root/img/icon_twitter_active_22px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        &.icon-24{
+            background-image: url(/root/img/icon_twitter_active_24px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+   
+}
+
+.icon-kakao{
+    &.icon-inactive{
+        &.icon-24{
+            background-image: url(/root/img/icon_kakao_inactive_24px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    &.icon-active{
+        &.icon-22{
+            background-image: url(/root/img/icon_kakao_active_22px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        &.icon-24{
+            background-image: url(/root/img/icon_kakao_active_24px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+}
+
+.icon-alarm{
+    &--inactive{
+        &.icon-20{
+            background-image: url(/root/img/icon_alarm_inactive_20px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        &.icon-24{
+            background-image: url(/root/img/icon_alarm_inactive_24px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    &--active{
+        &.icon-20{
+            background-image: url(/root/img/icon_alarm_active_20px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        &.icon-24{
+            background-image: url(/root/img/icon_alarm_active_24px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
+
+.icon-check{
+    &.icon-16{
+        background-image: url(/root/img/icon_check_16px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.icon-best{
+    &.icon-30x13{
+        background-image: url(/root/img/icon_best_30px_13px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.icon-left-circle{
+    &.icon-20{
+        background-image: url(/root/img/icon_left_circle_20px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &.icon-36{
+        background-image: url(/root/img/icon_left_circle_36px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.icon-right-circle{
+    &.icon-20{
+        background-image: url(/root/img/icon_right_circle_20px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &.icon-36{
+        background-image: url(/root/img/icon_right_circle_36px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.icon-calendar{
+    &.icon-20{
+        background-image: url(/root/img/icon_calendar_20px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.icon-left{
+    &.icon-20{
+        background-image: url(/root/img/icon_left_20px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.icon-right{
+    &.icon-20{
+        background-image: url(/root/img/icon_right_20px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.icon-display{
+    &--inactive{
+        &.icon-16{
+            background-image: url(/root/img/icon_display_inactive_16px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    &--active{
+        &.icon-16{
+            background-image: url(/root/img/icon_display_active_16px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
+
+.icon-hamburger{
+    &.icon-16{
+        background-image: url(/root/img/icon_hamburger_16px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.icon-hamburger-circle{
+    &.icon-36{
+        background-image: url(/root/img/icon_hamburger_circle_36px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.icon-comment{
+    &.icon-16{
+        background-image: url(/root/img/icon_comment_16px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+.icon-comment-circle{
+    &.icon-36{
+        background-image: url(/root/img/icon_comment_circle_36px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.icon-arrow{
+    &.icon-10{
+        background-image: url(/root/img/icon_arrow_10px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    &.icon-16{
+        background-image: url(/root/img/icon_arrow_16px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.icon-share{
+    &.icon-20{
+        background-image: url(/root/img/icon_share_20px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.icon-hashtag{
+    &.icon-20{
+        background-image: url(/root/img/icon_hashtag_20px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &.icon-32{
+        background-image: url(/root/img/icon_hashtag_32px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.icon-exp{
+    &.icon-20{
+        background-image: url(/root/img/icon_exp_20px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &.icon-24{
+        background-image: url(/root/img/icon_exp_24px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &.icon-65{
+        background-image: url(/root/img/icon_exp_65px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.icon-commerce{
+    &.icon-inactive{
+        &.icon-30{
+            background-image: url(/root/img/icon_commerce_inactive_30px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    &.icon-active{
+        &.icon-30{
+            background-image: url(/root/img/icon_commerce_active_30px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+
+    &.icon-36x26{
+        background-image: url(/root/img/icon_commerce_36px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.icon-add{
+    &.icon-20{
+        background-image: url(/root/img/icon_add_20px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.icon-edit{
+    &.icon-20{
+        background-image: url(/root/img/icon_edit_20px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+.icon-memo{
+    &.icon-12{
+        background-image: url(/root/img/icon_memo_12px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.icon-back{
+    &.icon-24{
+        background-image: url(/root/img/icon_back_24px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.icon-notify{
+    &.icon-inactive{
+        &.icon-24{
+            background-image: url(/root/img/icon_notify_inactive_24px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    &.icon-active{
+        &.icon-24{
+            background-image: url(/root/img/icon_notify_active_24px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
+
+.icon-page{
+    &.icon-inactive{
+        &.icon-24{
+            background-image: url(/root/img/icon_page_inactive_24px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    &.icon-active{
+        &.icon-24{
+            background-image: url(/root/img/icon_page_active_24px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
+
+.icon-curation{
+    &.icon-inactive{
+        &.icon-30{
+            background-image: url(/root/img/icon_curation_inactive_30px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    &.icon-active{
+        &.icon-30{
+            background-image: url(/root/img/icon_curation_active_30px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
+
+.icon-home{
+    &.icon-inactive{
+        &.icon-40{
+            background-image: url(/root/img/icon_home_inactive_40px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    &.icon-active{
+        &.icon-40{
+            background-image: url(/root/img/icon_home_active_40px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
+
+.icon-check{
+    &.icon-inactive{
+        &.icon-24{
+            background-image: url(/root/img/icon_check_inactive_24px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    &.icon-active{
+        &.icon-24{
+            background-image: url(/root/img/icon_check_active_24px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
+
+.icon-checkall{
+    &.icon-inactive{
+        &.icon-24{
+            background-image: url(/root/img/icon_checkall_inactive_24px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    &.icon-active{
+        &.icon-24{
+            background-image: url(/root/img/icon_checkall_active_24px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
+
+.icon-delete{
+    &.icon-inactive{
+        &.icon-24{
+            background-image: url(/root/img/icon_delete_inactive_24px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    &.icon-active{
+        &.icon-24{
+            background-image: url(/root/img/icon_delete_active_24px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
+
+
+.icon-wallet{
+    &.icon-24{
+        background-image: url(/root/img/icon_wallet_24px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.icon-config{
+    &.icon-inactive{
+        &.icon-24{
+            background-image: url(/root/img/icon_config_inactive_24px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    &.icon-active{
+        &.icon-24{
+            background-image: url(/root/img/icon_config_active_24px.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
+
+.icon-scroll{
+    &.icon-24x36{
+        background-image: url(/root/img/icon_scroll_24px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.icon-detail{
+    &.icon-24{
+        background-image: url(/root/img/icon_detail_24px.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}

@@ -1,0 +1,64 @@
+@import "../../../root/css/scss/variables";
+@import "../../../root/css/scss/mixins";
+/* 알림 페이지 */
+.notify{
+    display: flex;
+    width: 100%;
+    min-height: 105%;
+    margin: 0 auto;
+    flex-direction: column;
+    padding: 54px 0 100px 0;
+    box-sizing: border-box;
+
+    &__header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 44px;
+        z-index: 99;
+        background-color: $white;
+        box-sizing: border-box;
+        border-bottom: 1px solid $gray-4;
+
+        &-container{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            max-width: 768px;
+            padding: 0 16px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        &-close-button{
+            margin-right: 2px;
+        }
+
+        &-title{
+            line-height: 27px;
+            font-weight: $font-weight-bold;
+            color: $gray-12;
+            font-size: $font-size-large;
+        }
+
+        &-action-button{
+            margin-left: auto;
+        }
+    }
+
+    &__content{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 768px;
+        margin: 0 auto;
+    }
+
+    &__list{
+        overflow-y: auto;
+    }
+}

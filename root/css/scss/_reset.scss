@@ -1,0 +1,237 @@
+  /* CSS START */
+  html {
+    margin: 0;
+    padding: 0;
+    -webkit-overflow-scrolling: touch;
+    height: 100vh;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-family: $font-family;
+    font-size: $font-size-normal;
+    font-weight: $font-weight-medium;
+    color: $gray-12;
+    text-size-adjust: none;
+    height: 100vh;
+  }
+  
+  /* tag all font-size set */
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  img,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  var,
+  b,
+  u,
+  i,
+  center,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td,
+  article,
+  aside,
+  canvas,
+  details,
+  embed,
+  figure,
+  figcaption,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  output,
+  ruby,
+  section,
+  summary,
+  time,
+  mark,
+  audio,
+  video,
+  input,
+  select,
+  textarea,
+  button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    color: inherit;
+    vertical-align: baseline;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  ul,
+  ol,
+  li {
+    list-style: none;
+  }
+  
+  img {
+    vertical-align: top;
+    max-width: 100%;
+  }
+  
+  br {
+    font-size: 0;
+  }
+  
+  /* Link Style */
+  a {
+  
+    &,
+    &:visited,
+    &:active,
+    &:hover {
+        text-decoration: none;
+    }
+  }
+  
+  /* Table Style */
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+  
+    td img {
+        vertical-align: middle;
+    }
+  }
+  
+  /* Form Style */
+  input,
+  select,
+  textarea,
+  button {
+    appearance: none;
+    background: none;
+    border-radius:0;
+
+    &:focus {
+        outline: none;
+    }
+  
+    &::-ms-expand {
+        display: none
+    }
+  }
+  
+  input {
+    &[type="checkbox"] {
+        appearance: checkbox;
+        vertical-align: middle;
+    }
+  
+    &[type="radio"] {
+        appearance: radio;
+        vertical-align: middle;
+    }
+  
+    &[type="file"] {
+        display: none;
+    }
+
+    &[type=number] {
+      -moz-appearance: textfield;
+    }
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  
+  hr,
+  caption,
+  input::-ms-clear {
+    display: none;
+  }
+  
+  label,
+  button {
+    cursor: pointer;
+  }
+  
+  /* html5 set */
+  article,
+  aside,
+  canvas,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  nav,
+  menu,
+  nav,
+  section,
+  summary {
+    display: block;
+  }
+  
+  mark {
+    background: none;
+  }
+
+  .skip{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+}

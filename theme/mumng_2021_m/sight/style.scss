@@ -1,0 +1,23 @@
+@import "../../../root/css/scss/variables";
+@import "../../../root/css/scss/mixins";
+/* 발견 페이지 */
+.sight{
+    &-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 960px;
+        min-height: 100%;
+        margin: 0 auto;
+        padding: 60px 16px 100px 16px;
+        box-sizing: border-box;
+    }
+
+    &-list{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 18px;
+    }
+}

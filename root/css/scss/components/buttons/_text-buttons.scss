@@ -1,0 +1,25 @@
+.text-button{
+    color: $gray-12;
+
+    @each $weight, $value in $text-weight-values {
+        &.#{$weight} {
+          @include text-weight($value);
+        }
+    }
+
+    @each $size, $value in $text-size-values {
+        &.#{$size} {
+          @include text-size($value);
+        }
+    }
+
+    @each $color, $value in $text-color-values {
+        &.#{$color} {
+          @include text-color($value);
+        }
+    }
+
+    &.link-button:hover{
+        text-decoration: underline;
+    }
+}

@@ -1,0 +1,188 @@
+.check-box{
+    position:relative;
+    display: flex;
+    align-items: center;
+
+    .check-box__check{
+        display: none;
+
+        &:checked{
+            ~.check-box__span{
+                @include background(transparent, "/root/img/icon_checkbox_active_20px.png", no-repeat, right, center, 20px);
+            }
+
+            ~.check-box__label{
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .check-box__span{
+        display: inline-block;
+        width:20px;
+        height:20px;
+        @include background(transparent, "/root/img/icon_checkbox_inactive_20px.png", no-repeat, right, center, 20px);
+        margin-right: 6px;
+    }
+    
+    .check-box__label{
+        line-height: 20px;
+        font-weight: $font-weight-regular;
+        color: $gray-11;
+        font-size: $font-size-small;
+    }
+
+    .check-box__more{
+        margin-left: auto;
+    }
+
+    &.readonly{
+        pointer-events: none;
+        .check-box__label{
+            color: $gray-7;
+        }
+    }
+
+    &:not(.readonly):hover{
+        .check-box__label{
+            color: $gray-12;
+        }
+    }
+    
+}
+
+.check-group{
+    display: flex;
+    flex-direction: column;
+
+    .check-group__label{
+        line-height: 24px;
+        font-weight: $font-weight-bold;
+        color: $gray-10;
+        font-size: $font-size-normal;
+        margin-bottom: 12px;
+    }
+
+    .check-group__box{
+        margin-bottom: 6px;
+    }
+
+    .check-group__description{
+        line-height: 16px;
+        font-weight: $font-weight-regular;
+        color: $gray-7;
+        font-size: $font-size-xsmall;
+    }
+}
+
+/* new */
+.check-t1{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+    .check-t1__box{
+        display: flex;
+        align-items: center;
+    }
+
+    .check-t1__input{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        border: 0;
+        background-color: white;
+        appearance: none;
+        margin-right: 6px;
+
+        &::before{
+            content: "";
+            position: relative;
+            display: block;
+            width: 12px;
+            height: 12px;
+            background-color: $gray-4;
+            border-radius: 2px;
+            transition: all 0.2s;
+        }
+
+        &::after{
+            content: "";
+            position: relative;
+            display: none;
+            width: 12px;
+            height: 12px;
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMS45OTkiIGhlaWdodD0iMTIuMDAxIiB2aWV3Qm94PSIwIDAgMTEuOTk5IDEyLjAwMSI+PHBhdGggZD0iTTIyMjQsODc3MWgtOGEyLDIsMCwwLDEtMi0ydi04YTIsMiwwLDAsMSwyLTJoOGEyLDIsMCwwLDEsMiwydjhBMiwyLDAsMCwxLDIyMjQsODc3MVptLTctNi43MTRhLjkuOSwwLDAsMC0uNjM3LjI2NS45MDYuOTA2LDAsMCwwLDAsMS4yNzRsMS44NzUsMS44NzNhLjkuOSwwLDAsMCwxLjI3MiwwbDQuMTI1LTQuMTI1YS45LjksMCwxLDAtMS4yNzItMS4yNzJsLTMuNDg5LDMuNDg5LTEuMjM3LTEuMjM5QS45LjksMCwwLDAsMjIxNyw4NzY0LjI4NloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMjE0LjAwMSAtODc1OC45OTkpIiBmaWxsPSIjMzMzIi8+PC9zdmc+");
+        }
+
+        &:checked{
+            &::before{
+                display: none;
+            }
+            &::after{
+                display: block;
+            }
+
+            ~.check-t1__label{
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .check-t1__label{
+        line-height: 20px;
+        font-weight: $font-weight-regular;
+        color: $gray-11;
+        font-size: $font-size-small;
+        transition: all 0.2s;
+    }
+
+    .check-t1__more{
+        margin-left: auto;
+    }
+
+    .check-t1__description{
+        margin-top: 6px;
+        line-height: 18px;
+        font-weight: $font-weight-regular;
+        color: $gray-7;
+        font-size: $font-size-small;
+    }
+
+    &.error{
+        .check-t1__input{
+            &::before{
+                background-color: $error;
+            }
+        }
+        .check-t1__label{
+            text-decoration: underline;
+            color: $error;
+
+        }
+    }
+
+    &.readonly{
+        pointer-events: none;
+        .check-t1__input{
+            opacity: 0.4;
+        }
+        .check-t1__label{
+            color: $gray-7;
+        }
+    }
+   
+    &:not(.readonly):not(.error):hover{
+        .check-t1__input{
+            &::before{
+                background-color: $gray-5;
+            }
+        }
+        .check-t1__label{
+            text-decoration: underline;
+        }
+    }
+ 
+}

@@ -1,0 +1,29 @@
+@mixin margin($vt-px, $hz-px) {
+    margin: $vt-px $hz-px !important;
+}
+
+@mixin margin-top($t-px) {
+    margin-top: $t-px !important;
+}
+
+@mixin margin-right($r-px) {
+    margin-right: $r-px !important;
+}
+
+@mixin margin-bottom($b-px) {
+    margin-bottom: $b-px !important;
+}
+
+@mixin margin-left($l-px) {
+    margin-left: $l-px !important;
+}
+
+@mixin margin-vt($t-px, $b-px) {
+    margin-top: $t-px !important;
+    margin-bottom: $b-px !important;
+}
+
+@mixin margin-hz($l-px, $r-px) {
+    margin-left: $l-px !important;
+    margin-right: $r-px !important;
+}

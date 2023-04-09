@@ -1,0 +1,309 @@
+.file-profile{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+
+    &.edit{
+        .file-profile__edit-button{
+            display: block;
+        }
+    }
+
+    &:not(.edit):hover{
+        .file-profile__box{
+            display: flex;
+        }
+    }
+
+    &__box{
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: $white;
+        opacity: 0.9;
+
+        &-icon{
+            margin-bottom: 10px;
+        }
+
+        &-text{
+            line-height: 20px;
+            font-weight: $font-weight-bold;
+            color: $gray-7;
+            font-size: $font-size-small;
+        }
+    }
+
+    &__input{
+        display: none;
+    }
+
+    &__img{
+        width: 160px;
+        height: 160px;
+        border: 1px solid $gray-4;
+        border-radius: 50%;
+        box-sizing: border-box;
+    }      
+
+    &__edit-button{
+        position: absolute;
+        display: none;
+        right: 0;
+        bottom: 0;
+        width: 36px;
+        height: 36px;
+        border: 1px solid $gray-4;
+        border-radius: 50%;
+        box-sizing: border-box;
+        background-color: $white;
+    }
+
+}
+
+.file-work{
+    position: relative;
+    width: 290px;
+    height: 360px;
+
+    &.edit{
+        .file-work__img{
+            display: block;
+        }
+    }
+    
+    &__box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        width: 290px;
+        height: 360px;
+        @include box-shadow(0px 3px 6px 0px transparentize($color: #000000, $amount: 0.85));
+        border: 1px solid $gray-4;
+        background-color: $white;
+
+        &-icon{
+            margin-bottom: 10px;
+        }
+
+        &-text{
+            line-height: 20px;
+            font-weight: $font-weight-bold;
+            color: $gray-7;
+            font-size: $font-size-small;
+        }
+        &-text2{
+            line-height: 18px;
+            font-weight: $font-weight-regular;
+            color: $gray-7;
+            font-size: $font-size-xsmall;
+        }
+    }
+
+    &__input{
+        display: none;
+    }
+
+    &__img{
+        position: absolute;
+        display: none;
+        top: 0;
+        left: 0;
+        width: 290px;
+        height: 360px;
+        border-radius: 6px;
+        border: 1px solid $gray-4;
+        box-sizing: border-box;
+    }      
+}
+
+.file-epsd{
+    position: relative;
+    width: 96px;
+    height: 96px;
+
+    &.edit{
+        .file-epsd__img{
+            display: block;
+        }
+    }
+    
+    &__box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2px;
+        width: 96px;
+        height: 96px;
+        border: 1px solid $gray-4;
+        background-color: $white;
+        box-sizing: border-box;
+
+        &-icon{
+            margin-bottom: 10px;
+        }
+
+        &-text{
+            line-height: 20px;
+            font-weight: $font-weight-bold;
+            color: $gray-7;
+            font-size: $font-size-small;
+        }
+        &-text2{
+            line-height: 18px;
+            font-weight: $font-weight-regular;
+            color: $gray-7;
+            font-size: $font-size-xsmall;
+        }
+    }
+
+    &__input{
+        display: none;
+    }
+
+    &__img{
+        position: absolute;
+        display: none;
+        top: 0;
+        left: 0;
+        width: 96px;
+        height: 96px;
+        border-radius: 2px;
+        border: 1px solid $gray-4;
+        box-sizing: border-box;
+    }      
+}
+
+.file-sight{
+    position: relative;
+    &.edit{
+        .file-sight__img{
+            display: block;
+        }
+    }
+
+    &.novel{
+        .file-sight__box,
+        .file-sight__img,
+        .file-sight__none{
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+    }
+
+    &.none{
+        .file-sight__img{
+            display: none;
+        }
+        .file-sight__none{
+            display: block;
+        }
+    }
+    
+    &__box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        width: 290px;
+        height: 360px;
+        @include box-shadow(0px 3px 6px 0px transparentize($color: #000000, $amount: 0.85));
+        border: 1px solid $gray-4;
+        background-color: $white;
+        box-sizing: border-box;
+        &-icon{
+            margin-bottom: 10px;
+        }
+
+        &-text{
+            line-height: 20px;
+            font-weight: $font-weight-bold;
+            color: $gray-7;
+            font-size: $font-size-small;
+        }
+        &-text2{
+            line-height: 18px;
+            font-weight: $font-weight-regular;
+            color: $gray-7;
+            font-size: $font-size-xsmall;
+        }
+    }
+
+    &__input{
+        display: none;
+    }
+
+    &__img{
+        position: absolute;
+        display: none;
+        top: 0;
+        left: 0;
+        width: 290px;
+        height: 360px;
+        border-radius: 6px;
+        border: 1px solid $gray-4;
+        box-sizing: border-box;
+    }  
+
+    &__none{
+        position: absolute;
+        display: none;
+        top: 0;
+        left: 0;
+        width: 290px;
+        height: 360px;
+        border-radius: 6px;
+        border: 1px solid $gray-4;
+        box-sizing: border-box;
+        padding-top: 20px;
+        padding-left: 32px;
+        background-color: $white;
+
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 16px;
+            width: 1px;
+            height: 100%;
+            background-color: $gray-4;
+        }
+
+        &-grp{
+            line-height: 27px;
+            font-weight: $font-weight-bold;
+            color: $gray-5;
+            font-size: $font-size-large;
+        }
+        &-title{
+            line-height: 32px;
+            font-weight: $font-weight-bold;
+            color: $gray-12;
+            font-size: $font-size-xlarge;
+            margin-bottom: 10px;
+        }
+
+        &-name{
+            line-height: 18px;
+            font-weight: $font-weight-regular;
+            color: $gray-10;
+            font-size: $font-size-xsmall;
+        }
+    }
+}

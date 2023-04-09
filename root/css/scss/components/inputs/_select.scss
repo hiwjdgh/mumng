@@ -1,0 +1,268 @@
+.select-box{
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    .select-box__label{
+        line-height: 24px;
+        font-weight: $font-weight-medium;
+        color: $gray-7;
+        font-size: $font-size-normal;
+        cursor: pointer;
+        transition: all 0.2s;
+
+    }
+
+    .select-box__select{
+        line-height: 24px;
+        font-weight: $font-weight-regular;
+        color: $gray-7;
+        font-size: $font-size-normal;
+        padding: 4px 16px 4px 0;
+        border: none;
+        border-bottom: 1px solid $gray-4;
+        outline: none;
+        box-sizing: border-box;
+        @include background(transparent, "/root/img/icon_arrow_16px.png", no-repeat, right, center, 16px);
+        transition: all 0.2s;
+        &::-ms-expand {
+            display: none; 
+        }
+    }
+
+    .select-box__action{
+        position: absolute;
+        top: 32px;
+        right: 0;
+        display: inline-flex;
+        line-height: 18px;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-xsmall;
+        color: $gray-4;
+        background-color: $white;
+    }
+
+
+    .select-box__msg{
+        margin-top: 6px;
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 18px;
+        line-height: 18px;
+        font-weight: $font-weight-regular;
+        color: $gray-7;
+        font-size: $font-size-small;
+    }
+    
+   
+    &.focus{
+        .select-box__label{
+            color: $gray-10;
+        }
+        
+        .select-box__select{
+            color: $gray-10;
+            border-bottom-color: $gray-11;
+        }
+    }
+
+    &.readonly{
+        .select-box__label{
+            cursor: default;
+            color: $gray-7;
+        }
+    
+        .select-box__select{
+            pointer-events: none;
+            background-image: none;
+        }
+    }
+
+    
+    &.valid{
+        &:not(.readonly):not(.focus){
+            .select-box__action{
+                color: $gray-10;
+            }
+        }
+    }
+
+    &:hover{
+        &:not(.readonly):not(.focus){
+            .select-box__label{
+                color: $gray-8;
+            }
+    
+            .select-box__select{
+                color: $gray-8;
+                border-color: $gray-5;
+            }
+        }
+    }
+}
+
+.select-box-t2{
+    position: relative;
+    display: inline-flex;
+    min-width: 84px;
+
+    .select-box-t2__select{
+        width: 100%;
+        line-height: 18px;
+        font-weight: $font-weight-medium;
+        color: $gray-11;
+        font-size: $font-size-xsmall;
+        padding: 4px 16px;
+        border: 1px solid $gray-4;
+        border-radius: 20px;
+        outline: none;
+        box-sizing: border-box;
+        @include background(transparent, "/root/img/icon_arrow_16px.png", no-repeat, 95%, center, 16px);
+
+        &::-ms-expand {
+            display: none; 
+        }
+    }
+
+    
+    &.readonly{
+        .select-box-t2__select{
+            pointer-events: none;
+            background-image: none;
+            color: $gray-7;
+        }
+    }
+}
+
+/* 20221222 */
+.select-t1{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+    .select-t1__label{
+        line-height: 24px;
+        font-weight: $font-weight-medium;
+        color: $gray-7;
+        font-size: $font-size-normal;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+    .select-t1__select{
+        line-height: 24px;
+        font-weight: $font-weight-regular;
+        color: $gray-7;
+        font-size: $font-size-normal;
+        padding: 4px 16px 4px 0;
+        border: none;
+        border-bottom: 1px solid $gray-4;
+        outline: none;
+        box-sizing: border-box;
+        @include background(transparent, "/root/img/icon_arrow_16px.png", no-repeat, right, center, 16px);
+        transition: all 0.2s;
+        &::-ms-expand {
+            display: none; 
+        }
+    }
+
+    .select-t1__description{
+        margin-top: 6px;
+        line-height: 18px;
+        font-weight: $font-weight-regular;
+        color: $gray-7;
+        font-size: $font-size-small;
+    }
+    
+    &.focus{
+        .select-t1__label{
+            color: $gray-10;
+        }
+
+        .select-t1__select{
+            color: $gray-10;
+            border-bottom-color: $gray-11;
+        }
+    }
+
+    &.readonly{
+        pointer-events: none;
+        .select-t1__label{
+            cursor: default;
+            color: $gray-7;
+        }
+    
+        .select-t1__select{
+            pointer-events: none;
+            background-image: none;
+        }
+    }
+   
+    &:not(.readonly):not(.focus):hover{
+        .select-t1__label{
+            color: $gray-8;
+        }
+
+        .select-t1__select{
+            color: $gray-8;
+            border-color: $gray-5;
+        }
+    }
+}
+
+.select-t2{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+    .select-t2__select{
+        line-height: 18px;
+        font-weight: $font-weight-medium;
+        color: $gray-7;
+        font-size: $font-size-xsmall;
+        padding: 4px 16px;
+        border: 1px solid $gray-4;
+        border-radius: 20px;
+        outline: none;
+        box-sizing: border-box;
+        @include background(transparent, "/root/img/icon_arrow_16px.png", no-repeat, calc(100% - 8px), center, 16px);
+        transition: all 0.2s;
+        &::-ms-expand {
+            display: none; 
+        }
+    }
+
+    .select-t2__description{
+        margin-top: 6px;
+        line-height: 18px;
+        font-weight: $font-weight-regular;
+        color: $gray-7;
+        font-size: $font-size-small;
+    }
+    
+    &.focus{
+        .select-t2__select{
+            color: $gray-10;
+            border-color: $gray-11;
+        }
+    }
+
+    &.readonly{
+        pointer-events: none;
+    
+        .select-t2__select{
+            pointer-events: none;
+            background-image: none;
+        }
+    }
+   
+    &:not(.readonly):not(.focus):hover{
+        .select-t2__select{
+            color: $gray-8;
+            border-color: $gray-5;
+        }
+    }
+}

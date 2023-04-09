@@ -1,0 +1,30 @@
+@each $color, $value in $text-color-values {
+    .text-color-#{$color} {
+      @include text-color($value);
+    }
+  }
+@each $color, $value in $text-color-values2 {
+    .text-color-#{$color} {
+      @include text-color($value);
+    }
+  }
+@each $weight, $value in $text-weight-values {
+    .text-weight-#{$weight} {
+      @include text-weight($value);
+    }
+  }
+@each $size, $value in $text-size-values {
+    .text-size-#{$size} {
+      @include text-size($value);
+    }
+  }
+@each $align, $value in $text-align-values {
+    .text-align-#{$align} {
+      @include text-align($value);
+    }
+  }
+@each $decoration, $value in $text-decoration-values {
+    .text-decoration-#{$decoration} {
+      @include text-decoration($value);
+    }
+  }

@@ -1,0 +1,390 @@
+@import "../../../root/css/scss/variables";
+@import "../../../root/css/scss/mixins";
+/* 웹툰 페이지 */
+#work{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    padding: 0 34px;
+    box-sizing: border-box;
+
+    #work__rcmnd{
+        flex: 0 0 254px;
+        height: 254px;
+        border-bottom: 1px solid $gray-4;
+        margin-bottom: 52px;
+    }
+
+    #work__day-box{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        #work__day{
+            display: flex;
+            gap: 0 8px;
+            .work__day-item,
+            .work__state-item{
+                position: relative;
+                display: inline-flex;
+                width: 46px;
+                height: 46px;
+                align-items: center;
+                justify-content: center;
+                line-height: 24px;
+                font-weight: $font-weight-bold;
+                color: $gray-5;
+                font-size: $font-size-normal;
+                background-color: $gray-1;
+                border-radius: 50%;
+
+                &:hover{
+                    color: $gray-6;
+                    background-color: $gray-2;
+                }
+                
+                &.active{
+                    background-color: $gray-11;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    #work__filter{
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-bottom: 24px;
+        
+        #work__filter-genre{
+            display: flex;
+            align-items: baseline;
+            
+            li:first-child{
+                .work__filter-genre-item{
+                    line-height: 41px;
+                    font-size: 28px;
+                    margin-right: 20px;
+                }
+            }
+            .work__filter-genre-item{
+                line-height: 27px;
+                font-weight: $font-weight-bold;
+                color: $gray-5;
+                font-size: $font-size-large;
+                margin-right: 16px;
+
+                &:hover{
+                    color: $gray-6;
+                }
+                
+                &.active{
+                    color: $gray-12;
+                }
+
+              
+            }
+        }
+
+        #work__filter-order-button{
+            margin-left: auto;
+            line-height: 24px;
+            font-weight: $font-weight-bold;
+            color: $gray-11;
+            font-size: $font-size-normal;
+        }
+    }
+
+    #work__list{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding-bottom: 400px;
+
+        .work__list-item{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            border: 1px solid $gray-4;
+            width: 290px;
+            height: 360px;
+            cursor: pointer;
+
+            &.webtoon-item{
+                border-radius: 6px;
+
+                &::before{
+                    border-radius: 6px;
+                }
+
+                .work__list-img{
+                    border-radius: 6px;
+                }
+                
+            }
+            
+            &.novel-item{
+                border-top-left-radius: 6px;
+                border-top-right-radius: 20px;
+                border-bottom-left-radius: 6px;
+                border-bottom-right-radius: 20px;
+                
+                &::before{
+                    border-top-left-radius: 6px;
+                    border-top-right-radius: 20px;
+                    border-bottom-left-radius: 6px;
+                    border-bottom-right-radius: 20px;
+                }
+    
+                .work__list-img{
+                    border-top-left-radius: 6px;
+                    border-top-right-radius: 20px;
+                    border-bottom-left-radius: 6px;
+                    border-bottom-right-radius: 20px;
+                }
+
+            }
+
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: $white;
+                background: linear-gradient(0deg, rgba(255,255,255,1) 20%, rgba(255,255,255,0) 100%);
+                z-index: 1;
+            }
+
+            .work__list-img{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+
+            .work__list-img-box{
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 100%;
+                border-top-left-radius: 6px;
+                border-top-right-radius: 20px;
+                border-bottom-left-radius: 6px;
+                border-bottom-right-radius: 20px;
+                padding-left: 32px;
+                padding-right: 24px;
+                padding-top: 20px;
+                box-sizing: border-box;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 16px;
+                    width: 1px;
+                    background-color: $gray-4;
+                }
+
+                .work__list-img-genre{
+                    line-height: 27px;
+                    font-weight: $font-weight-bold;
+                    color: $gray-5;
+                    font-size: $font-size-large;
+                }
+                .work__list-img-name{
+                    line-height: 33px;
+                    font-weight: $font-weight-bold;
+                    color: $gray-12;
+                    font-size: 22px;
+                    margin-bottom: 10px;
+                }
+                .work__list-img-user{
+                    line-height: 18px;
+                    font-weight: $font-weight-regular;
+                    color: $gray-10;
+                    font-size: $font-size-xsmall;
+                }
+            }
+
+            .work__list-info{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                height: 140px;
+                border-radius: 6px;
+                padding: 0 12px 12px 12px;
+                box-sizing: border-box;
+                z-index: 2;
+               
+                .work__list-epsd-cnt{
+                    line-height: 15px;
+                    font-weight: $font-weight-regular;
+                    color: $gray-7;
+                    font-size: $font-size-2xsmall;
+                    margin-bottom: 4px;
+                }
+
+                .work__list-info01{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 6px;
+
+                    .work__list-state{
+                        margin-right: 4px;
+                    }
+
+                    .work__list-name{
+                        line-height: 20px;
+                        font-weight: $font-weight-bold;
+                        color: $gray-12;
+                        font-size: $font-size-small;
+                    }
+
+                }
+
+                .work__list-info02{
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+
+                    .work__list-user{
+                        flex: 1;
+                        display: flex;
+                        align-items: center;
+                        .work__list-user-img{
+                            position: relative;
+                            margin-right: 4px;
+                            font-size: 0;
+                            img{
+                                width: 20px;
+                                height: 20px;
+                                border-radius: 50%;
+                                border: 1px solid $gray-4;
+                                border-radius: 50%;
+                                box-sizing: border-box;
+                                &:nth-child(1){
+                                    z-index: 3;
+                                }
+                                &:nth-child(2){
+                                    z-index: 2;
+                                    margin-left: -10px;
+                                }
+                                &:nth-child(3){
+                                    z-index: 1;
+                                    margin-left: -10px;
+                                }
+                            }
+                        }
+
+                        .work__list-user-nick{
+                            line-height: 18px;
+                            font-weight: $font-weight-regular;
+                            color: $gray-10;
+                            font-size: $font-size-xsmall;
+                            margin-right: 4px;
+                        }
+                     
+                    }
+
+                    .work__list-user-dropdown{
+                        position: absolute;
+                        top: 24px;
+                        left: 0;
+                        display: flex;
+                        width: 290px;
+                        flex-wrap: wrap;
+                        flex-direction: column;
+                        padding: 10px;
+                        box-sizing: border-box;
+                        border: 1px solid $gray-4;
+                        border-radius: 6px;
+                        background-color: $white;
+                        @include box-shadow(3px 3px 6px 0px transparentize($color: #000000, $amount: 0.85));
+
+                        .work__list-user-follow{
+                            display: flex;
+                            max-height: 142px;
+                            overflow-y: auto;
+                            flex-direction: column;
+                            gap:12px 0;
+                            
+                            .work__list-user-follow-item{
+                                display: flex;
+                                align-items: center;
+                               
+                                img{
+                                    width: 32px;
+                                    height: 32px;
+                                    border-radius: 50%;
+                                    border: 1px solid $gray-4;
+                                    border-radius: 50%;
+                                    box-sizing: border-box;
+                                    margin-right: 6px;
+                                    flex: 0 0 32px;
+                                }
+                                
+                                .work__list-user-follow-nick-box{
+                                    flex: 1;
+                                    display: flex;
+                                    flex-direction: column;
+                                    .work__list-user-follow-nick{
+                                        line-height: 18px;
+                                        font-weight: $font-weight-regular;
+                                        color: $gray-10;
+                                        font-size: $font-size-xsmall;
+                                    }
+                                    .work__list-user-follow-field{
+                                        line-height: 15px;
+                                        font-weight: $font-weight-regular;
+                                        color: $gray-7;
+                                        font-size: $font-size-2xsmall;
+                                    }
+                                }
+                                .work__list-user-follow-button{
+
+                                }
+                            }
+                        }
+                    }
+
+                    .work__list-epsd-like{
+                        display: inline-flex;
+                        align-items: center;
+                        margin-right: 6px;
+                        .work__list-epsd-like-icon{
+                            margin-right: 4px;   
+                        }
+
+                        .work__list-epsd-like-cnt{
+                            line-height: 18px;
+                            font-weight: $font-weight-medium;
+                            color: $gray-9;
+                            font-size: $font-size-xsmall;
+                        }
+                    }
+
+                    .work__list-epsd-hit{
+                        display: inline-flex;
+                        align-items: center;
+                        margin-left: auto;
+                        .work__list-epsd-hit-icon{
+                            margin-right: 4px;   
+                        }
+
+                        .work__list-epsd-hit-cnt{
+                            line-height: 18px;
+                            font-weight: $font-weight-medium;
+                            color: $gray-9;
+                            font-size: $font-size-xsmall;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

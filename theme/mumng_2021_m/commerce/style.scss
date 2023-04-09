@@ -1,0 +1,609 @@
+@import "../../../root/css/scss/variables";
+@import "../../../root/css/scss/mixins";
+/* 커머스 페이지 */
+.commerce{
+    display: flex;
+    width: 100%;
+    min-height: 105%;
+    margin: 0 auto;
+    flex-direction: column;
+    padding: 100px 0 100px 0;
+    box-sizing: border-box;
+  
+    &__header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        z-index: 99;
+        background-color: $white;
+        box-sizing: border-box;
+
+        &-container{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 44px;
+            max-width: 768px;
+            padding: 0 16px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            border-bottom: 1px solid $gray-4;
+        }
+
+        &-close-button{
+            margin-right: 2px;
+        }
+
+        &-title{
+            line-height: 27px;
+            font-weight: $font-weight-bold;
+            color: $gray-12;
+            font-size: $font-size-large;
+        }
+
+        &-tab{
+            display: flex;
+            width: 100%;
+            height: 44px;
+            max-width: 768px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            border-bottom: 1px solid $gray-4;
+            background-color: $white;
+
+            &-list{
+                position: relative;
+                display: flex;
+                width: 100%;
+                align-items: center;
+            }
+
+            &-item{
+                flex: 1 1 0;
+                display: block;
+
+                &-link{
+                    position: relative;
+                    display: block;
+                    padding: 14px 0;
+                    box-sizing: border-box;
+                    text-align: center;
+                    &.current{
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            bottom: 0px;
+                            display: block;
+                            width: 100%;
+                            height: 1px;
+                            background-color: $gray-11;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__content{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 768px;
+        margin: 0 auto;
+    }
+
+    &__card{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        padding: 20px;
+        border: 1px solid $gray-4;
+        border-radius: 6px;
+        box-sizing: border-box;
+        background-color: $white;
+        margin-bottom: 20px;
+
+        &-header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+
+            &-title{
+                line-height: 20px;
+                font-weight: $font-weight-medium;
+                color: $gray-12;
+                font-size: $font-size-small;
+
+            }
+
+            &-more{
+                line-height: 18px;
+                font-weight: $font-weight-bold;
+                color: $gray-12;
+                font-size: $font-size-xsmall;
+            }
+        }
+
+        &-content{
+            overflow-x: auto;
+        }
+    }
+
+    &__home{
+        display: flex;
+        flex-direction: column;
+        padding: 0 16px;
+        box-sizing: border-box;
+
+        &-title{
+            line-height: 27px;
+            font-weight: $font-weight-medium;
+            color: $gray-12;
+            font-size: $font-size-large;
+            margin-bottom: 12px;
+        }
+
+        &-card{
+            flex: 1;
+            display: flex;
+            @include box-shadow(3px 3px 6px 0px transparentize($color: #000000, $amount: 0.85));
+            padding: 20px;
+            margin-bottom: 16px;
+            border-radius: 6px;
+            background-color: $gray-11;
+            box-sizing: border-box;
+            gap: 0 20px;
+
+            &-grade{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            &-user{
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                margin-bottom: 54px;
+
+                &-nick-box{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+
+                &-img{
+                    flex: 0 0 40px;
+                    max-width: 40px;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    border: 1px solid $gray-4;
+                    margin-right: 12px;
+                }
+
+                &-nick{
+                    line-height: 27px;
+                    font-weight: $font-weight-bold;
+                    color: $white;
+                    font-size: $font-size-large;
+                }
+
+                &-date-box{
+                    display: flex;
+                    align-items: baseline;
+                }
+
+                &-date-text{
+                    line-height: 18px;
+                    font-weight: $font-weight-regular;
+                    color: $gray-7;
+                    font-size: $font-size-xsmall;
+                    margin-right: 6px;
+                }
+
+                &-date{
+                    line-height: 18px;
+                    font-weight: $font-weight-regular;
+                    color: $white;
+                    font-size: $font-size-xsmall;
+                }
+            }
+
+            &-info{
+                display: flex;
+                flex-direction: column;
+
+               
+                &-detail-box{
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                &-icon-box{
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                &-icon-inner-box{
+                    display: flex;
+                    align-items: center;
+                }
+
+                &-icon{
+                    margin-right: 8px;
+                }
+
+                &-icon-text{
+                    line-height: 18px;
+                    font-weight: $font-weight-regular;
+                    color: $gray-7;
+                    font-size: $font-size-xsmall;
+                    margin-bottom: 10px;
+                }
+
+
+                &-icon-text2{
+                    line-height: 20px;
+                    font-weight: $font-weight-black;
+                    color: $white;
+                    font-size: $font-size-small;
+                }
+
+                &-fee-box{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                }
+                
+                &-fee-text{
+                    line-height: 18px;
+                    font-weight: $font-weight-regular;
+                    color: $gray-7;
+                    font-size: $font-size-xsmall;
+                }
+
+                &-fee{
+                    line-height: 54px;
+                    font-weight: $font-weight-black;
+                    color: $white;
+                    font-size: 36px;
+                }
+            }
+        }
+    }
+    
+    &__profit{
+        display: flex;
+        flex-direction: column;
+        padding: 0 16px;
+        box-sizing: border-box;
+
+        &-title{
+            line-height: 27px;
+            font-weight: $font-weight-medium;
+            color: $gray-12;
+            font-size: $font-size-large;
+            margin-bottom: 12px;
+        }
+
+    }
+
+    &__calc{
+        display: flex;
+        flex-direction: column;
+        padding: 0 16px;
+        box-sizing: border-box;
+
+        &-title{
+            line-height: 27px;
+            font-weight: $font-weight-medium;
+            color: $gray-12;
+            font-size: $font-size-large;
+            margin-bottom: 12px;
+        }
+    }
+}
+
+.commerce__row{
+    display: flex;
+    gap: 0 20px;
+     > .commerce__col{
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+.commerce__col{
+    flex: 1 0 0%;
+    display: flex;
+    box-sizing: border-box;
+}
+
+
+@for $i from 1 through 50 {
+    .commerce__col-#{$i}{
+        flex: 0 0 auto;
+        width: #{$i}#{"%"};
+    }
+}
+
+/* 정산신청 모달 */
+#commerce__calc-modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparentize($color: $white, $amount: 0.15);
+    z-index: 104;
+    
+    #commerce__calc-box{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 620px;
+        margin: 0 auto;
+        border: 1px solid $gray-4;
+        @include box-shadow(3px 3px 6px 0px transparentize($color: #000000, $amount: 0.85));
+        box-sizing: border-box;
+        border-radius: 6px;
+        background-color: $white;
+        max-height: 800px;
+        overflow-y: auto;
+
+        #commerce__calc-header{
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid $gray-4;
+            margin: 16px 16px 12px 16px;
+            padding-bottom: 16px;
+            #commerce__calc-title{
+                flex: 1;
+                line-height: 27px;
+                font-weight: $font-weight-bold;
+                color: $gray-12;
+                font-size: $font-size-large;
+            }
+    
+            #commerce__calc-close{
+                flex: 0 0 20px;
+                max-width: 20px;
+            }
+        }
+
+        #commerce__calc-content{
+            display: flex;
+            flex-direction: column;
+            #commerce__calc-current-box{
+              
+                #commerce__calc-current-text{
+                    line-height: 18px;
+                    font-weight: $font-weight-regular;
+                    color: $gray-7;
+                    font-size: $font-size-xsmall;
+                }
+
+                #commerce__calc-current{
+                
+                    #commerce__calc-current-exp{
+                        line-height: 27px;
+                        font-weight: $font-weight-bold;
+                        color: $gray-10;
+                        font-size: $font-size-large;
+                    }
+                }
+            }
+
+            #commerce__calc-form{
+                display: flex;
+                flex-direction: column;
+                
+                #commerce__calc-withdrawal-box{
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 16px;
+
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        bottom: 5px;
+                        left: 0;
+                        display: block;
+                        width: 100%;
+                        height: 1px;
+                        background-color: $gray-4;
+                    }
+                    &::after{
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 6px;
+                        background-color: $gray-2;
+                    }
+
+                    #commerce__calc-withdrawal-header{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin: 0 16px 12px 16px;
+
+                        #commerce__calc-withdrawal-text{
+                            line-height: 24px;
+                            font-weight: $font-weight-medium;
+                            color: $gray-10;
+                            font-size: $font-size-normal;
+                        }
+                    }
+
+                    #commerce__calc-withdrawal{
+                        margin-bottom: 16px;
+                        padding: 0 16px;
+                        box-sizing: border-box;
+
+                        &::after{
+                            content: "EXP";
+                            line-height: 20px;
+                            font-weight: $font-weight-bold;
+                            color: $gray-10;
+                            font-size: $font-size-small;
+                            position: absolute;
+                            top: 50%;
+                            right: 30px;
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+
+                #commerce__calc-bsns-box{
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 16px;
+
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        bottom: 5px;
+                        left: 0;
+                        display: block;
+                        width: 100%;
+                        height: 1px;
+                        background-color: $gray-4;
+                    }
+                    &::after{
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 6px;
+                        background-color: $gray-2;
+                    }
+
+
+                    #commerce__calc-bsns-header{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin: 0 16px 12px 16px;
+
+                        #commerce__calc-bsns-label{
+                            line-height: 24px;
+                            font-weight: $font-weight-medium;
+                            color: $gray-10;
+                            font-size: $font-size-normal;
+                        }
+    
+                        #commerce__calc-bsns{
+                            display: flex;
+                            align-items: center;
+                            gap: 0 16px;
+                        }
+                    }
+
+                    #commerce__calc_bsns-info-box{
+                        display: none;
+                        flex-direction: column;
+                        margin-bottom: 16px;
+                        padding: 0 16px 18px;
+    
+                        #commerce__calc_bsns-owner-box{
+                            margin-bottom: 24px;
+                        }
+    
+                        #commerce__calc_bsns-name-box{
+                            margin-bottom: 24px;
+                        }
+                        
+                        #commerce__calc_bsns-number-box{
+                        }
+                    }
+                }
+                
+                #commerce__calc_deposit-box{
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 16px;
+                    padding: 0 16px 18px;
+
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        bottom: 5px;
+                        left: 0;
+                        display: block;
+                        width: 100%;
+                        height: 1px;
+                        background-color: $gray-4;
+                    }
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        display: block;
+                        width: 100%;
+                        height: 5px;
+                        background-color: $gray-2;
+                    }
+
+                    #commerce__calc_deposit-header{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-bottom: 16px;
+
+                        #commerce__calc-deposit-label{
+                            line-height: 24px;
+                            font-weight: $font-weight-medium;
+                            color: $gray-10;
+                            font-size: $font-size-normal;
+                        }
+
+                        #commerce__calc-deposit-load-button{
+
+                        }
+                    }
+
+
+                    #commerce__calc_bank-box{
+                        margin-bottom: 24px;
+                    }
+
+                    #commerce__calc_account-box{
+                        margin-bottom: 24px;
+                    }
+                    
+                    #commerce__calc_owner-box{
+                        margin-bottom: 24px;
+                    }
+                }
+
+                #commerce__calc_agree-box{
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 24px;
+                    padding: 0 16px;
+                }
+
+                #commerce__calc_submit-box{
+                    display: flex;
+                    width: 50%;
+                    margin: 0 auto;
+                    align-items: center;
+                    width: 50%;
+                    padding: 0 16px 24px;
+                }
+            }
+        }
+    }
+}

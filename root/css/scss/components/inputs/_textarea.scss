@@ -1,0 +1,154 @@
+.textarea-box{
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    border: 1px solid $gray-4;
+    border-radius: 20px;
+    padding: 8px;
+    box-sizing: border-box;
+    min-height: 120px;
+    transition: all 0.2s;
+
+    .textarea-box__textarea{
+        flex: 1;
+        line-height: 18px;
+        font-weight: $font-weight-regular;
+        color: $gray-7;
+        font-size: $font-size-xsmall;
+        outline: none;
+        resize: none;
+        padding: 8px;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+
+    .textarea-box__counter{
+        align-self: flex-end;
+      
+        .textarea-box__counter-now{
+            line-height: 18px;
+            font-weight: $font-weight-regular;
+            color: $gray-7;
+            font-size: $font-size-xsmall;
+        }
+        .textarea-box__counter-max{
+            line-height: 18px;
+            font-weight: $font-weight-regular;
+            color: $gray-7;
+            font-size: $font-size-xsmall;
+        }
+    }
+
+    &.readonly{
+        .textarea-box__textarea{
+            color: $gray-7;
+            border-color: $gray-7;
+        }
+    }
+       
+
+    &.focus{
+
+        &:not(.readonly){
+            border-color: $gray-11;
+
+            .textarea-box__textarea{
+                color: $gray-12;
+            }
+        }
+    }
+
+    &.invalid{
+        &:not(.readonly){
+            border-color: $error;
+        }
+    }
+
+    &:hover{
+        &:not(.readonly):not(.focus){
+            border-color: $gray-5;
+        }
+    }
+}
+
+.textarea-t1{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+    .textarea-t1__box{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border: 1px solid $gray-4;
+        border-radius: 20px;
+        box-sizing: border-box;
+        padding: 8px;
+        transition: all 0.2s;
+    }
+
+    .textarea-t1__textarea{
+        width: 100%;
+        padding: 8px 20px 8px 8px;
+        box-sizing: border-box;
+
+        min-height: 120px;
+        line-height: 18px;
+        font-weight: $font-weight-regular;
+        color: $gray-7;
+        font-size: $font-size-xsmall;
+        border: none;
+        outline: none;
+        resize: none;
+    }
+
+    .textarea-t1__counter{
+        align-self: flex-end;
+        line-height: 18px;
+        font-weight: $font-weight-regular;
+        color: $gray-7;
+        font-size: $font-size-xsmall;
+    }
+
+    .textarea-t1__description{
+        margin-top: 6px;
+        line-height: 18px;
+        font-weight: $font-weight-regular;
+        color: $gray-7;
+        font-size: $font-size-small;
+    }
+
+    &.focus{
+        .textarea-t1__box{
+            border-color: $gray-11;
+        }
+
+        .textarea-t1__textarea{
+            color: $gray-10;
+        }
+    }
+
+    &.readonly{
+        pointer-events: none;
+        .textarea-t1__box{
+            border: 1px solid $gray-7;
+        }
+
+        .textarea-t1__textarea{
+            color: $gray-7;
+        }
+    }
+   
+    &:not(.readonly):not(.focus):hover{
+        .textarea-t1__box{
+            border-color: $gray-5;
+        }
+
+        .textarea-t1__textarea{
+            color: $gray-8;
+        }
+    }
+}
+

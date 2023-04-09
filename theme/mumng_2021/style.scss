@@ -1,0 +1,524 @@
+@import "../../root/css/scss/variables";
+@import "../../root/css/scss/mixins";
+
+/* 컨텐츠 */
+#wrap{
+    width: 100%;
+    height: 100%;
+}
+/* 헤더 */
+#header{
+    position: fixed; 
+    top: 0px;
+    display: flex;
+    width: 100%;
+    height: 58px;
+    align-items: center;
+    background-color: $white;
+    z-index: 999;
+    &::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: $gray-3;
+    }
+
+    #header__box{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        max-width: 1920px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        padding: 0 34px;
+    
+    }
+    #header__logo{
+        display: inline-block;
+        width: 84px;
+        margin-right: 62px;
+
+        @media screen and (max-width: 1440px) {
+            margin-right: 24px;
+        }
+    
+
+        a{
+            display: block;
+        }
+    }
+
+    #header__gnb01{
+        display: flex;
+        align-items: center;
+        gap: 0 32px;
+     
+        @media screen and (max-width: 1440px) {
+            gap: 0 24px;
+        }
+
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+    
+
+        li{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+         
+            a,button{
+                display: block;
+                font-size: $font-size-large;
+                color: $gray-8;
+                height: 58px;
+                line-height: 58px;
+            }
+
+            &.gnb01--active{
+                &::after{
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    height: 1px;
+                    background-color: $gray-11;
+                    z-index: 1;
+                }
+
+                a{
+                    font-weight: $font-weight-bold;
+                    color: $gray-11;
+                }
+            }
+        }
+    }
+
+    #header__search{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+
+        display: flex;
+        width: 400px;
+        height: 32px;
+
+        @media screen and (max-width: 1440px) {
+            display: none;
+        }
+    
+        #search_keyword{
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 6px 40px;
+            border-radius: 23px;
+            border: 1px solid $gray-4;
+            @include background($gray-2, "/root/img/icon_search_16px.png", no-repeat, 12px, center, 16px);
+            box-sizing: border-box;
+            font-size: $font-size-small;
+            color: $gray-12;
+            &:active,
+            &:focus,
+            &:hover{
+                border: 1px solid $gray-5;
+            }
+    
+            &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: $gray-6;
+            opacity: 1; /* Firefox */
+            }
+              
+            &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: $gray-6;
+            }
+            
+            &::-ms-input-placeholder { /* Microsoft Edge */
+            color: $gray-6;
+            }
+        }
+    }
+
+    #header__gnb02{
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        gap: 0 32px;
+     
+        @media screen and (max-width: 1440px) {
+            gap: 0 24px;
+        }
+
+        >li{
+            
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 30px;
+            font-size: $font-size-small;
+            color: $gray-11;
+            font-weight: $font-weight-bold;
+            
+            #header__guide-button,
+            #header__notify-button{
+                line-height: 30px;
+                font-size: $font-size-small;
+                color: $gray-11;
+                font-weight: $font-weight-bold;
+            }
+
+            #header__gnb02-profile-button{
+                width: 32px;
+                height: 32px;
+                >img{
+                    border-radius: 50%;
+                    border: 1px solid $gray-4;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+}
+
+
+
+.notify-dropdown{
+    display: flex;
+    width: 515px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 16px 16px 25px 16px;
+    box-sizing: border-box;
+    border: 1px solid $gray-4;
+    border-radius: 6px;
+    background-color: $white;
+    @include box-shadow(3px 3px 6px 0px transparentize($color: #000000, $amount: 0.85));
+
+    .notify-dropdown__title{
+        line-height: 24px;
+        font-weight: $font-weight-regular;
+        color: $gray-12;
+        font-size: $font-size-normal;
+        margin-bottom: 16px;
+    }
+
+    .notify-dropdown__list{
+        overflow-y: auto;
+        max-height: 300px;
+        margin-bottom: 24px;
+    }
+    
+    .notify-dropdown__config{
+        align-self: center;
+    }
+}
+
+.profile-dropdown{
+    display: flex;
+    width: 300px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 16px;
+    box-sizing: border-box;
+    border: 1px solid $gray-4;
+    border-radius: 6px;
+    background-color: $white;
+    @include box-shadow(3px 3px 6px 0px transparentize($color: #000000, $amount: 0.85));
+
+    .profile-dropdown__info{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-bottom: 12px;
+
+        .profile-dropdown__img{
+            border: 1px solid $gray-4;
+            box-sizing: border-box;
+            border-radius: 50%;
+            width: 60px;
+            margin-right: 12px;
+        }
+
+    }
+
+    .profile-dropdown__info02{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        
+        .profile-dropdown__nick{
+            line-height: 24px;
+            font-weight: $font-weight-medium;
+            color: $gray-12;
+            font-size: $font-size-normal;
+        }
+
+        .profile-dropdown__field{
+            line-height: 18px;
+            font-weight: $font-weight-regular;
+            color: $gray-7;
+            font-size: $font-size-xsmall;
+        }
+    }
+
+    .profile-dropdown__follow{
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+
+        
+        .profile-dropdown__follower,
+        .profile-dropdown__following{
+            position: relative;
+            line-height: 18px;
+            font-weight: $font-weight-regular;
+            color: $gray-10;
+            font-size: $font-size-xsmall;
+        }
+
+        .profile-dropdown__follower-cnt,
+        .profile-dropdown__following-cnt{
+            line-height: 18px;
+            font-weight: $font-weight-bold;
+            color: $gray-12;
+            font-size: $font-size-xsmall;
+            margin-left: 4px;
+
+        }
+
+        .profile-dropdown__edit{
+            margin-left: auto;
+        }
+
+    }
+
+    .profile-dropdown__charge{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        border-top: 1px solid $gray-4;
+        padding: 16px 0;
+
+        .profile-dropdown__free{
+            line-height: 18px;
+            font-weight: $font-weight-regular;
+            font-size: $font-size-xsmall;
+            color: $gray-7;
+            text-decoration: underline;
+        }
+
+        .profile-dropdown__own{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .profile-dropdown__now{
+                line-height: 27px;
+                font-weight: $font-weight-bold;
+                color: $gray-12;
+                font-size: $font-size-large;
+                margin-right: 4px;
+            }
+            .profile-dropdown__exp{
+                line-height: 27px;
+                font-weight: $font-weight-bold;
+                color: $gray-10;
+                font-size: $font-size-large;
+            }
+        }
+
+    }
+    .profile-dropdown__link01{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 10px 0;
+        border-top: 1px solid $gray-4;
+        border-bottom: 1px solid $gray-4;
+        a{
+            display: block;
+            line-height: 48px;
+            font-weight: $font-weight-bold;
+            color: $gray-11;
+            font-size: $font-size-normal;
+
+            &.disabled{
+                color: $gray-7;
+                pointer-events: none;
+            }
+        }
+    }
+
+    .profile-dropdown__link02{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 10px 0;
+
+        a,
+        button{
+            display: block;
+            line-height: 48px;
+            font-weight: $font-weight-bold;
+            color: $gray-11;
+            font-size: $font-size-normal;
+        }
+    }
+}
+/* 컨테이너 */
+#container{
+    position: relative;
+    display: flex;
+  /*   max-width: 1920px; */
+    width: 100%;
+    /* margin: 0 auto; */
+   /*  min-height: calc(100% - 94px); */
+}
+
+/* 푸터 */
+#footer{
+    position: fixed; 
+    bottom: 0px;
+    display: flex;
+    width: 100%;
+    height: 36px;
+    align-items: center;
+    vertical-align: middle;
+    background-color: $gray-2;
+    z-index: 102;
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: $gray-3;
+    }
+
+    #footer__box{
+        display: flex;
+        width: 100%;
+        max-width: 1920px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        padding: 0 34px;
+        align-items: center;
+
+    }
+    #footer__gnb01{
+        display: flex;
+        >li{
+            display: inline-block;
+            position: relative;
+            margin-right: 40px;
+
+            &:last-child{
+                margin-right: 0;
+            }
+            a,button{
+                display: block;
+                line-height: 18px;
+                font-weight: $font-weight-medium;
+                color: $gray-9;
+                font-size: $font-size-xsmall;
+            }
+        }
+    }
+
+    .footer-dropdown{
+        display: flex;
+        flex-direction: column;
+        display: flex;
+        width: 340px;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 16px;
+        box-sizing: border-box;
+        border: 1px solid $gray-4;
+        border-radius: 6px;
+        background-color: $white;
+        @include box-shadow(3px 3px 6px 0px transparentize($color: #000000, $amount: 0.85));
+
+        
+        .footer-dropdown__title{
+            line-height: 20px;
+            font-weight: $font-weight-bold;
+            color: $gray-12;
+            font-size: $font-size-small;
+            margin-bottom: 12px;
+        }
+        .footer-dropdown__content{
+            line-height: 18px;
+            font-weight: $font-weight-regular;
+            color: $gray-10;
+            font-size: $font-size-xsmall;
+            display: flex;
+            flex-direction: column;
+            
+        }
+    }
+
+    #footer__logo{
+        display: inline-block;
+        width: 48px;
+        margin-left: auto;
+        img{
+            max-width: 100%;
+        }
+    }
+}
+
+.fab{
+    &-container{
+        position: fixed;
+        right: 32px;
+        bottom: 76px;
+    }
+
+    &-button{
+        width: 60px;
+        height: 60px;
+        background-color: $gray-11;
+        border: 1px solid $gray-4;
+        border-radius: 50%;
+        box-sizing: border-box;
+        transition: box-shadow 0.2s, background-color 0.2s, border-color 0.2s;
+        &:hover{
+            background-color: $gray-12;
+            border-color: $gray-5;
+            transition: box-shadow 0.2s;
+            @include box-shadow(3px 3px 6px 0px transparentize($color: #000000, $amount: 0.52));
+        }
+
+    }
+
+    &-option{
+        position: absolute;
+        right: 0;
+        bottom: 90px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px 0;
+        visibility: hidden;
+        opacity: 0;
+        text-align: right;
+        transition: opacity .2s, visibility 0s .2s;
+        &.show{
+            visibility: visible;
+            opacity: 1;
+        }
+      
+    }
+}
+
+.modal-open{
+    overflow-y: hidden;
+    padding-right: 17px;
+}

@@ -1,0 +1,58 @@
+.step{
+    display: flex;
+
+    &__item{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        cursor: pointer;
+        &::before{
+            content: "";
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: $gray-4;
+            margin: 0 auto 16px;
+        }
+
+      /*   &:not(:last-child) {
+            &::after {
+                content: "";
+                position: relative;
+                top: 16px;
+                width: calc(100% - 32px);
+                left: calc(50% + 16px);
+                height: 2px;
+                background-color: $gray-4;
+                order: -1;
+            }
+        } */
+
+        &.current{
+            &::before,
+            &::after{
+                background-color: $gray-12;
+            }
+    
+        }
+    }
+
+    &__title{
+        line-height: 18px;
+        font-weight: $font-weight-bold;
+        color: $gray-7;
+        font-size: $font-size-small;
+    }
+
+    &__description{
+        line-height: 18px;
+        font-weight: $font-weight-regular;
+        color: $gray-7;
+        font-size: $font-size-small;
+    }
+
+    &__content{
+        //js 에서 쓰임 (필수)
+    }
+}

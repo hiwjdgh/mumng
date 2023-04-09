@@ -1,0 +1,4 @@
+@mixin max-width($width) {
+    max-width: $width;
+    flex: 0 0 $width
+}

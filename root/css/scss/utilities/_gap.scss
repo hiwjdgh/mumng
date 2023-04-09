@@ -1,0 +1,16 @@
+@each $size, $value in $gap-values {
+    .gap-#{$size} {
+      @include gap($value);
+    }
+}
+
+@each $size, $value in $gap-values {
+    .gap-row-#{$size} {
+      @include gap-row($value);
+    }
+}
+@each $size, $value in $gap-values {
+    .gap-column-#{$size} {
+      @include gap-column($value);
+    }
+}

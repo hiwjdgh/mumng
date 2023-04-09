@@ -1,0 +1,13 @@
+.cropper-modal{
+    background-color: #FFFFFF;
+    opacity: 0.8;
+}
+
+.cropper-view-box {
+    border-radius: 50%;
+    outline: none;
+}
+
+.cropper-dashed{
+    border: 0 solid #FFFFFF;
+}

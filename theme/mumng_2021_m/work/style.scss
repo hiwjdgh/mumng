@@ -1,0 +1,125 @@
+@import "../../../root/css/scss/variables";
+@import "../../../root/css/scss/mixins";
+/* 작품 페이지 */
+.work{
+    display: flex;
+    width: 100%;
+    min-height: 120%;
+    margin: 0 auto;
+    flex-direction: column;
+    padding: 110px 0 100px 0;
+    box-sizing: border-box;
+
+    &__header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        z-index: 98;
+        background-color: $white;
+        box-sizing: border-box;
+        transition: transform 225ms cubic-bezier(0,0,.2,1);
+        transition-property: all;
+
+        &.scroll{
+            top: 0px;
+            transition: transform 195ms cubic-bezier(.4,0,1,1);
+        }
+        
+        &-container{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100px;
+            max-width: 768px;
+            padding: 0 16px;
+            margin: 0 auto;
+            box-sizing: border-box;
+
+        }
+
+        &-inner-box{
+            position: relative;
+            display: flex;
+            width: 100%;
+            height: 44px;
+            align-items: center;
+        }
+
+        &-genre-button{
+            line-height: 27px;
+            font-weight: $font-weight-bold;
+            color: $gray-12;
+            font-size: $font-size-large;
+        }
+    
+        &-order{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+    
+            &-prev-button{
+                transform: rotate(90deg);
+            }
+            &-next-button{
+                transform: rotate(-90deg);
+            }
+    
+            &-text{
+                line-height: 20px;
+                font-weight: $font-weight-bold;
+                color: $gray-11;
+                font-size: $font-size-small;
+                padding: 0 4px;
+            }
+        }
+    
+        &-day{
+            display: flex;
+            height: 56px;
+            margin: 0 auto;
+            &-list{
+                display: flex;
+                width: 100%;
+                align-items: center;
+                gap: 0 6px;
+                padding: 8px 0 12px 0;
+                box-sizing: border-box;
+            }
+
+            &-item{
+                display: inline-flex;
+                width: 36px;
+                height: 36px;
+                align-items: center;
+                justify-content: center;
+                line-height: 20px;
+                font-weight: $font-weight-bold;
+                color: $gray-5;
+                font-size: $font-size-small;
+                background-color: $gray-1;
+                border-radius: 50%;
+                transition: color,background-color 0.2s;
+                cursor: pointer;
+                
+                &.current{
+                    background-color: $gray-11;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    &__list{
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 16px 8px;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+}

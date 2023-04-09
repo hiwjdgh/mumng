@@ -1,0 +1,192 @@
+// * * * * * * * * * * * * *
+// * * Import variables  * *
+// * * * * * * * * * * * * *
+
+@import './scss/variables';
+
+// * * * * * * * * * * *
+// * * Import mixins * *
+// * * * * * * * * * * *
+@import './scss/mixins';
+
+// * * * * * * * * * * * * * * *
+// * * Import font   * * * * * *
+// * * * * * * * * * * * * * * *
+@import './scss/font';
+
+// * * * * * * * * * * * * * * * *
+// * * Import reset styles * * * *
+// * * * * * * * * * * * * * * * *
+@import './scss/reset';
+
+
+// * * * * * * * * * * * * * * * *
+// * * Import layout styles * *
+// * * * * * * * * * * * * * * * *
+@import './scss/layouts';
+
+// * * * * * * * * * * * * * * * *
+// * * Import component styles * *
+// * * * * * * * * * * * * * * * *
+@import './scss/components';
+
+#loader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.loader{
+  position:absolute;
+	border-radius:50%;
+	border-width:3px;
+	border-style:solid;
+	animation-fill-mode:both;
+	animation-duration:2s;
+	animation-iteration-count:infinite;
+	animation-direction:alternate;
+	animation-timing-function:cubic-bezier(.2,1,.6,1);
+
+  &:nth-child(1){
+    animation-name:breathe-1;
+    border-color:$loader-color1;
+    background-color:$loader-color4;
+    z-index: 3;
+    height: 100px;
+    width: 100px;
+    animation-delay: 0.5s;
+  }
+  &:nth-child(2){
+    animation-name:breathe-2;
+    border-color:$loader-color2;
+    background-color:$loader-color5;
+    z-index: 2;
+    height: 150px;
+    width: 150px;
+    animation-delay: 0.25s;
+  }
+  
+  &:nth-child(3){
+    animation-name:breathe-3;
+    border-color:$loader-color3;
+    background-color:$loader-color6;
+    z-index: 1;
+    height: 200px;
+    width: 200px;
+    animation-delay: 0.166667s;
+
+  }
+}
+
+@keyframes breathe-1{
+  0%,
+  70%{	
+      box-shadow:2px 2px 1px 0px rgba(0,0,0,.2);
+      transform:scale(0);
+    }
+  
+  100%{
+      box-shadow:10px 10px 15px 0px rgba(0,0,0,.3);
+      transform:scale(1);
+    }
+}
+  
+@keyframes breathe-2{
+  0%,
+  40%{	
+      box-shadow:2px 2px 1px 0px rgba(0,0,0,.2);
+      transform:scale(0);
+    }
+  
+  100%{
+      box-shadow:10px 10px 15px 0px rgba(0,0,0,.3);
+      transform:scale(1);
+    }
+  }
+  
+@keyframes breathe-3{
+  0%,
+  10%{	
+      box-shadow:2px 2px 1px 0px rgba(0,0,0,.2);
+      transform:scale(0);
+    }
+  
+  100%{
+      box-shadow:10px 10px 15px 0px rgba(0,0,0,.3);
+      transform:scale(1);
+    }
+}
+/* 
+#loader,
+#loader::before,
+#loader::after{
+    background: #111;
+    -webkit-animation: load 1s infinite ease-in-out;
+    animation: load 1s infinite ease-in-out;
+    width: 1em;
+    height: 4em;
+}
+
+#loader {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    color: #111;
+    text-indent: -9999em;
+    margin: 88px auto;
+    font-size: 11px;
+    transform: translate(-50%, -50%);
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+    z-index: 9999;
+}
+#loader::before,
+#loader::after {
+  position: absolute;
+  top: 0;
+  content: '';
+}
+
+#loader:before {
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+#loader:after {
+  left: 1.5em;
+}
+
+@-webkit-keyframes load {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+@keyframes load {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+} */
+// * * * * * * * * * * * * * * * *
+// * * Import utilities styles * *
+// * * * * * * * * * * * * * * * *
+@import './scss/utilities';

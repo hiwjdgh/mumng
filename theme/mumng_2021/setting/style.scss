@@ -1,0 +1,438 @@
+@import "../../../root/css/scss/variables";
+@import "../../../root/css/scss/mixins";
+/* 설정 페이지 */
+#account{
+    display: flex;
+    width: 100%;
+    min-height: 100%;
+    max-width: 1920px;
+    padding-top: 58px;
+    padding-bottom: 36px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    
+    #account__side{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        max-width: 153px;
+        flex: 0 0 153px;
+        box-sizing: border-box;
+        background-color: $gray-1;
+        border-right: 1px solid $gray-4;
+        margin-right: 306px;
+
+        #account__title{
+            line-height: 27px;
+            font-weight: $font-weight-medium;
+            color: $gray-12;
+            font-size: $font-size-large;
+            padding-top: 24px;
+            padding-left: 34px;
+            padding-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        #account__nav{
+            display: flex;
+            flex-direction: column;
+
+            .account__nav-link{
+                position: relative;
+                display: block;
+                padding: 12px 0 12px 34px;
+                box-sizing: border-box;
+                line-height: 24px;
+                font-weight: $font-weight-regular;
+                color: $gray-12;
+                font-size: $font-size-normal;
+
+                &.current{
+                    font-weight: $font-weight-medium;
+                    background-color: $gray-2;
+
+                    +.account__nav2{
+                        display: flex;
+                    }
+            
+                }
+
+                &:not(.current):hover{
+                    font-weight: $font-weight-medium;
+                    background-color: $gray-2;
+                }
+            }
+        }
+
+        .account__nav2{
+            position: absolute;
+            top: 0;
+            left: 153px;
+            display: none;
+            width: 306px;
+            height: 100%;
+            flex-direction: column;
+            background-color: $white;
+            border-right: 1px solid $gray-4;
+            box-sizing: border-box;
+            z-index: 99;
+            #notify__side-all{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 24px 34px;
+                border-bottom: 1px solid $gray-4;
+                box-sizing: border-box;
+                #notify__side-all-label{
+                    line-height: 27px;
+                    font-weight: $font-weight-medium;
+                    color: $gray-11;
+                    font-size: $font-size-large;
+                    margin-right: 53px;
+                }
+            }
+            
+            #notify__side-nav{
+                display: flex;
+                flex-direction: column;
+        
+                .notify__side-nav-link{
+                    position: relative;
+                    display: block;
+                    padding: 10px 34px;
+                    box-sizing: border-box;
+                    line-height: 27px;
+                    font-weight: $font-weight-medium;
+                    color: $gray-11;
+                    font-size: $font-size-large;
+        
+                    &.current{
+                        font-weight: $font-weight-bold;
+                        background-color: $gray-2;
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 2px;
+                            height: 100%;
+                            background-color: $gray-11;
+                        }
+                    }
+        
+                    &:not(.current){
+                        &:hover{
+                            background-color: $gray-1;
+                        }
+                    }
+                }
+            }
+
+            #setting__side{
+                display: flex;
+                flex-direction: column;
+                
+                #setting__side-nav{
+                    display: flex;
+                    flex-direction: column;
+            
+                    .setting__side-nav-link{
+                        position: relative;
+                        display: block;
+                        padding: 10px 34px;
+                        box-sizing: border-box;
+                        line-height: 27px;
+                        font-weight: $font-weight-medium;
+                        color: $gray-11;
+                        font-size: $font-size-large;
+            
+                        &.current{
+                            font-weight: $font-weight-bold;
+                            background-color: $gray-2;
+                            &::before{
+                                content: "";
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 2px;
+                                height: 100%;
+                                background-color: $gray-11;
+                            }
+                        }
+            
+                        &:not(.current){
+                            &:hover{
+                                background-color: $gray-1;
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+
+
+          
+        @media screen and (max-width:1024px) {
+            margin-right: 0;
+            #account__nav{
+                display: flex;
+                flex-direction: column;
+    
+                .account__nav-link{
+                    &.current{
+                        +.account__nav2{
+                            display: none;
+                        }
+    
+                    }
+                }/* 
+                .account__nav2{
+                    display: none;
+                } */
+            }
+        }
+    }
+
+    #account__content{
+        flex: 1;
+        display: flex;
+        width: 100%;
+        max-width: 1000px;
+        box-sizing: border-box;
+    }
+}
+
+/* 프로필 페이지 */
+#profile{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    padding: 30px 20px;
+    border-right: 1px solid $gray-4;
+    box-sizing: border-box;
+
+    #profile__title{
+        line-height: 27px;
+        font-weight: $font-weight-medium;
+        color: $gray-12;
+        font-size: $font-size-large;
+        margin-bottom: 32px;
+    }
+
+
+    #user__major-add-button{
+        display: flex;
+        width: 100%;
+        #user__major-add-box{
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            border: 1px dashed $gray-4;
+            padding: 30px 0;
+            border-radius: 2px;
+
+            #user__major-add-icon{
+                margin-bottom: 10px;
+            }
+
+            #user__major-add-text{
+                line-height: 20px;
+                font-weight: $font-weight-bold;
+                color: $gray-7;
+                font-size: $font-size-small;
+            }
+        }
+
+        #user__major-box{
+            display: flex;
+            width: 100%;
+            border: 1px solid $gray-4;
+            border-radius: 2px;
+            background-color: $white;
+            box-sizing: border-box;
+            #user__major-img{
+                flex: 0 0 90px;
+                max-width: 90px;
+            }
+
+            #user__major-info{
+                flex: 1;
+                display: flex;
+                width: calc(100% - 90px);
+                align-items: flex-start;
+                flex-direction: column;
+                padding: 10px;
+                box-sizing: border-box;
+                text-align: left;
+                #user__major-epsd{
+                    line-height: 15px;
+                    font-weight: $font-weight-regular;
+                    color: $gray-10;
+                    font-size: $font-size-2xsmall;
+                }
+
+                #user__major-name{
+                    width: 100%;
+                    line-height: 20px;
+                    font-weight: $font-weight-bold;
+                    color: $gray-12;
+                    font-size: $font-size-small;
+                    margin-bottom: 4px;
+                }
+
+                #user__major-description{
+                    line-height: 15px;
+                    font-weight: $font-weight-regular;
+                    color: $gray-7;
+                    font-size: $font-size-2xsmall;
+                }
+            }
+        }
+    }
+
+    
+    #user__sns-list{
+        overflow-y: auto;
+        .user__sns-item{
+            position: relative;
+            display: flex;
+            height: 50px;
+            align-items: center;
+            border: 1px solid $gray-4;
+            border-radius: 25px;
+            padding: 8px;
+            box-sizing: border-box;
+            background-color: $white;
+
+            .user__sns-hamburger{
+                flex: 0 0 16px;
+                margin-right: 8px;
+                cursor: grab;
+            }
+            .user__sns-icon{
+                flex: 0 0 24px;
+                margin-right: 8px;
+
+            }
+            .user__sns-text{
+                line-height: 18px;
+                font-weight: $font-weight-medium;
+                color: $gray-11;
+                font-size: $font-size-xsmall;
+                margin-right: 32px;
+            }
+
+            .user__sns-info{
+                display: flex;
+                align-items: center;
+                margin-left: auto;
+
+                .user__sns-id{
+                    line-height: 18px;
+                    font-weight: $font-weight-regular;
+                    color: $gray-11;
+                    font-size: $font-size-xsmall;
+                    margin-right: 12px;
+                }
+
+                .user__sns-cancel-button{
+                    margin-right: 8px;
+                }
+
+            }
+
+            .user__sns-reg-button{
+                margin-left: auto;
+                margin-right: 8px;
+            }
+
+            .user__sns-input{
+                display: none;
+                width: auto;
+                position: absolute;
+                right: 8px;
+                flex: 1;
+            }
+        }
+    }
+}
+
+
+/* 알림 페이지 */
+#notify{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    padding: 30px 20px;
+    padding-bottom: 110px;
+    border-right: 1px solid $gray-4;
+    box-sizing: border-box;
+
+    #notify__title{
+        line-height: 27px;
+        font-weight: $font-weight-medium;
+        color: $gray-12;
+        font-size: $font-size-large;
+        margin-bottom: 24px;
+    }
+
+    .notify__content{
+        .notify__content-label{
+            line-height: 27px;
+            font-weight: $font-weight-medium;
+            color: $gray-12;
+            font-size: $font-size-large;
+            margin-bottom: 16px;
+        }
+
+        .switch-group{
+            margin-bottom: 24px;
+        }
+    }
+}
+
+/* 계정 페이지 */
+#setting{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    padding: 30px 20px;
+    padding-bottom: 110px;
+    border-right: 1px solid $gray-4;
+    box-sizing: border-box;
+
+    #setting__title{
+        line-height: 27px;
+        font-weight: $font-weight-medium;
+        color: $gray-12;
+        font-size: $font-size-large;
+        margin-bottom: 24px;
+    }
+
+    #setting__content{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        #setting__content-header{
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+
+            #setting__content-label{
+                flex: 1;
+                line-height: 27px;
+                font-weight: $font-weight-medium;
+                color: $gray-12;
+                font-size: $font-size-large;
+            }
+        }
+      
+    }
+}

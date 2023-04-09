@@ -1,0 +1,14 @@
+User-agent: *
+Disallow: /user/
+Disallow: /upload/
+Disallow: /setting/
+Disallow: /penalty/
+Disallow: /payment/
+Disallow: /notify/
+Disallow: /library/
+Disallow: /commerce/
+Disallow: /charge/
+Disallow: /api/
+Disallow: /data/
+
+Sitemap: https://www.mumng.com/sitemap.xml

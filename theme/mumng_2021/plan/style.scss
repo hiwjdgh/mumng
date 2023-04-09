@@ -1,0 +1,532 @@
+@import "../../../root/css/scss/variables";
+@import "../../../root/css/scss/mixins";
+/* 커머스 플랜 페이지 */
+.plan{
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-height: 100%;
+    padding-top: 58px;
+    padding-bottom: 36px;
+    box-sizing: border-box;
+    background-color: $white;
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &__box1{
+      
+        background-color: #FFF9E1;
+
+        &-inner-box{
+            display: flex;
+            width: 100%;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 18px 20px;
+            box-sizing: border-box;
+        }
+
+        &-img-box{
+            flex: 0 0 480px;
+
+        }
+
+        &-img{
+        }
+
+        &-description-box{
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-text{
+            line-height: 24px;
+            font-weight: $font-weight-regular;
+            color: $gray-12;
+            font-size: $font-size-normal;
+        }
+
+        &-text2{
+            line-height: 50px;
+            font-weight: $font-weight-black;
+            color: $gray-12;
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        &-text3{
+            line-height: 24px;
+            font-weight: $font-weight-regular;
+            color: $gray-12;
+            font-size: $font-size-normal;
+            margin-bottom: 24px;
+
+        }
+
+        &-button{
+            align-self: flex-start;
+        }
+    }
+
+    &__box2{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 80px 20px;
+        box-sizing: border-box;
+        &-inner-box{
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 90px;
+        }
+
+        &-img{
+            width: 311px;
+        }
+
+        &-img2{
+            width: 480px;
+        }
+
+        &-img3{
+            width: 324px;
+            margin-bottom: 64px;
+        }
+
+        &-img4{
+            width: 226px;
+            margin-bottom: 56px;
+        }
+
+        &-img5{
+            width: 498px;
+        }
+    }
+
+    &__box3{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
+        padding: 100px 20px;
+        box-sizing: border-box;
+        background-color: #ECF6FF;
+
+        &-img{
+            width: 416px;
+            margin-bottom: 74px;
+        }
+
+        &-img2{
+            width: 346px;
+            margin-bottom: 40px;
+        }
+
+        &-button{
+            width: 316px;
+        }
+    }
+
+    
+    &__box4{
+        background-color: $gray-1;
+
+        &-inner-box{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 48px 20px;
+            box-sizing: border-box;
+        }
+
+        &-button-box{
+            display: flex;
+            align-items: center;
+            gap: 0 40px;
+        }
+
+
+        &-text{
+            line-height: 24px;
+            font-weight: $font-weight-regular;
+            color: $gray-6;
+            font-size: $font-size-normal;
+        }
+
+        &-button{
+            line-height: 24px;
+            font-weight: $font-weight-regular;
+            color: $gray-6;
+            font-size: $font-size-normal;
+        }
+    }
+
+}
+#plan{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100%;
+    padding-bottom: 200px;
+    background-color: $gray-2;
+
+    #plan__header{
+        display: flex;
+        width: 100%;
+        height: 83px;
+        background-color: $white;
+
+        #plan__header-box{
+            display: flex;
+            width: 100%;
+            max-width: 960px;
+            margin: 0 auto;
+            align-items: center;
+            padding: 0 34px;
+            box-sizing: border-box;
+            #plan__title{
+                line-height: 27px;
+                font-weight: $font-weight-bold;
+                color: $gray-12;
+                font-size: $font-size-large;
+            }
+        }
+
+    }
+
+    #plan__content{
+        flex: 1;
+        display: flex;
+        width: 100%;
+
+        #plan__content-box{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 960px;
+            margin: 0 auto;
+            margin-top: 60px;
+            padding: 0 34px;
+            box-sizing: border-box;
+            gap: 0 20px;
+
+            #plan__event-box{
+                position: relative;
+                display: flex;
+                height: 254px;
+                padding: 24px 24px 24px 34px;
+                flex-direction: column;
+                box-sizing: border-box;
+                background-color: $white;
+
+                #plan__event-commerce-box{
+                    position: absolute;
+                    top: 24px;
+                    left: 34px;
+                    display: flex;
+                    align-items: center;
+
+                    #plan__event-commerce-icon{
+                        margin-right: 8px;   
+                    }
+
+                    #plan__event-commerce-text{
+                        line-height: 24px;
+                        font-weight: $font-weight-bold;
+                        color: $gray-12;
+                        font-size: $font-size-normal;
+                    }
+                }
+
+                #plan__event-date{
+                    position: absolute;
+                    top: 24px;
+                    right: 24px;
+                    line-height: 18px;
+                    font-weight: $font-weight-regular;
+                    color: $gray-12;
+                    font-size: $font-size-xsmall;
+                }
+
+                #plan__event-content-box{
+                    margin-top: auto;
+                    display: flex;
+                    align-items: flex-end;
+
+                    #plan__event-content-img{
+                        flex: 0 0 328px;
+                        max-width: 328px;
+                        width: 328px;
+                        height: 116px;
+                    }
+
+                    #plan__event-content-benefit-box{
+                        margin-left: auto;
+                        display: flex;
+                        flex-direction: column;
+
+                        #plan__event-content-benefit-text{
+                            line-height: 24px;
+                            font-weight: $font-weight-regular;
+                            color: $gray-12;
+                            font-size: $font-size-normal;
+                            margin-right: 65px;
+                            margin-bottom: 26px;
+                        }
+
+                        #plan__event-content-benefit-link-box{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            
+                            #plan__event-content-benefit-link-text{
+                                line-height: 20px;
+                                font-weight: $font-weight-black;
+                                color: $gray-12;
+                                font-size: $font-size-small;
+                            }
+                        }
+                    }
+                }
+            }
+
+            #plan__advice-box{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 60px;
+                padding-bottom: 40px;
+
+                #plan__advice-text{
+                    line-height: 30px;
+                    font-weight: $font-weight-bold;
+                    color: $gray-12;
+                    font-size: 20px;
+                    margin-bottom: 16px;
+                }
+
+                #plan__advice-description{
+                    line-height: 18px;
+                    font-weight: $font-weight-regular;
+                    color: $gray-7;
+                    font-size: $font-size-xsmall;
+                }
+
+            }
+
+            #plan__kind-box{
+                position: relative;
+                display: flex;
+                gap: 0 20px;
+                .plan__kind-item{
+                    display: flex;
+                    width: 284px;
+                    flex-direction: column;
+                    border: 1px solid $gray-4;
+                    border-radius: 6px;
+                    box-sizing: border-box;
+                    background-color: $white;
+
+                    .plan__name{
+                        padding: 20px 20px 0 20px;
+                        line-height: 20px;
+                        font-weight: $font-weight-black;
+                        color: $gray-12;
+                        font-size: $font-size-small;
+                    }
+
+                    .plan__fee-monthly-box{
+                        margin-top: 16px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 0 20px 20px;
+                        border-bottom: 1px solid $gray-4;
+                        >div{
+                            display: flex;
+                            flex-direction: column;
+
+                            >div{
+                                display: flex;
+                                align-items: baseline;
+                                
+                                .plan__fee-monthly-text01{
+                                    line-height: 24px;
+                                    font-weight: $font-weight-black;
+                                    color: $gray-12;
+                                    font-size: $font-size-normal;
+                                    margin-right: 2px;
+                                }
+                                
+                                .plan__fee-monthly-text02{
+                                    line-height: 18px;
+                                    font-weight: $font-weight-regular;
+                                    color: $gray-7;
+                                    font-size: $font-size-xsmall;
+                                }
+                            }
+                            .plan__fee-text{
+                                line-height: 18px;
+                                font-weight: $font-weight-regular;
+                                color: $gray-7;
+                                font-size: $font-size-xsmall;
+                            }
+                        }
+
+                        .plan__fee-percent{
+                            line-height: 48px;
+                            font-weight: $font-weight-black;
+                            color: $gray-12;
+                            font-size: 36px;
+                        }
+
+                    }
+
+                    .plan__benefit-box{
+                        display: flex;
+                        flex-direction: column;
+                        padding: 20px;
+
+                        .plan__benefit-list{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 20px 0;
+                            >li{
+                                display: flex;
+                                align-items: center;
+                                line-height: 20px;
+                                font-weight: $font-weight-regular;
+                                color: $gray-12;
+                                font-size: $font-size-small;
+
+                                &::before{
+                                    content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 100 100'><circle cx='50%' cy='50%' r='20' /></svg>");
+                                    display: inline-block;
+                                    width: 20px;
+                                    height: 20px;
+                                    margin-right: 4px;
+                                    line-height:20px;
+                                }
+                            }
+                        }
+
+                        .plan__buy-button{
+                            margin-top: 60px;
+                            align-self: flex-end;
+                        }
+                    }
+                }
+                
+                #plan__verify-box{
+                    position: absolute;
+                    display: none;
+                    width: 710px;
+                    left: 50%;
+                    bottom: 24px;
+                    transform: translateX(-50%);
+                    background-color: $gray-11;
+                    @include box-shadow(3px 3px 6px 0px transparentize($color: #000000, $amount: 0.85));
+                    border-radius: 6px;
+                    padding: 20px;
+                    box-sizing: border-box;
+                    
+                    #plan__verify-close-button{
+                        position: absolute;
+                        top: 7px;
+                        right: 7px;
+                    }
+                    #plan__verify-content-box{
+                        display: flex;
+                        flex-direction: column;
+                        padding: 20px;
+                        border-radius: 20px;
+                        background-color: $gray-10;
+                        box-sizing: border-box;
+
+                        #plan__verify-content-explain-box{
+                            display: flex;
+                            justify-content: space-between;
+                            margin-bottom: 20px;
+                            #plan__verify-content-explain-text-box{
+                                display: flex;
+                                flex-direction: column;
+                               
+                                #plan__verify-content-explain-text{
+                                    line-height: 20px;
+                                    font-weight: $font-weight-medium;
+                                    color: $white;
+                                    font-size: $font-size-small;
+                                    margin-bottom: 8px;
+                                }
+
+                                #plan__verify-content-explain-description{
+                                    line-height: 18px;
+                                    font-weight: $font-weight-regular;
+                                    color: $white;
+                                    font-size: $font-size-xsmall;
+                                }
+                            }
+
+                            #plan__verify-content-epsd-cnt-box{
+                                display: flex;
+                                gap: 0 32px;
+
+                                .plan__verify-content-epsd-cnt{
+                                    display: inline-flex;
+                                    width: 60px;
+                                    height: 60px;
+                                    justify-content: center;
+                                    align-items: center;
+                                    background-color: $gray-11;
+                                    border-radius: 50%;
+                                }
+                            }
+                        }
+
+                        #plan__verify-content-link-box{
+                            display: flex;
+                            justify-content: space-between;
+
+                            #plan__verify-content-link{
+                                line-height: 18px;
+                                font-weight: $font-weight-bold;
+                                color: $white;
+                                font-size: $font-size-xsmall;
+                                text-decoration: underline;
+                            }
+
+                            #plan__verify-content-cureent-text{
+                                line-height: 18px;
+                                font-weight: $font-weight-regular;
+                                color: $white;
+                                font-size: $font-size-xsmall;
+                                #plan__verify-content-current-min{
+                                    line-height: 18px;
+                                    font-weight: $font-weight-regular;
+                                    color: $gray-7;
+                                    font-size: $font-size-xsmall;
+                                }
+                            }
+                        }
+                    }
+    
+                }
+            }
+
+        }
+    }
+}

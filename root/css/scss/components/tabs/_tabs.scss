@@ -1,0 +1,27 @@
+.tab{
+    display: flex;
+    align-items: center;
+    gap: 0 16px;
+    .tab__item{
+        font-weight: $font-weight-bold;
+        line-height: 27px;
+        font-size: $font-size-large;
+        color: $gray-5;
+        transition: color 0.2s;
+
+        &.disabled,
+        &:disabled{
+           color: $gray-5;
+        }
+
+        &.current{
+            color: $gray-12;
+        }
+
+        &:hover{
+            &:not(.disabled):not(:disabled):not(.current){
+                color: $gray-6;
+            }
+        }
+    }
+}

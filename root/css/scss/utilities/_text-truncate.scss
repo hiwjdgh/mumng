@@ -1,0 +1,9 @@
+.text-truncate{
+    @include text-truncate()
+}
+.text-truncate-line2{
+    @include text-truncate-line(2)
+}
+.text-truncate-line3{
+    @include text-truncate-line(3)
+}

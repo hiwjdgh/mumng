@@ -1,0 +1,93 @@
+// * * * * * * * * * * * * *
+// * * Import variables  * *
+// * * * * * * * * * * * * *
+
+@import './variables/animation';
+@import './variables/background';
+@import './variables/border';
+@import './variables/border-radius';
+@import './variables/box-shadow';
+@import './variables/margin';
+@import './variables/overflow';
+@import './variables/padding';
+@import './variables/max-width';
+@import './variables/gap';
+@import './variables/text-truncate';
+@import './variables/text';
+@import './variables/layout';
+
+
+// * * * * * * * * * * * * * * * * *
+// * * Import override variables * *
+// * * * * * * * * * * * * * * * * *
+@import './variables/variables-override';
+
+
+$white:     #FFFFFF;
+$gray-1:    #FCFCFC;
+$gray-2:    #F7F7F7;
+$gray-3:    #F2F2F2;
+$gray-4:    #E5E5E5;
+$gray-5:    #CCCCCC;
+$gray-6:    #B2B2B2;
+$gray-7:    #999999;
+$gray-8:    #7F7F7F;
+$gray-9:    #666666;
+$gray-10:   #4C4C4C;
+$gray-11:   #333333;
+$gray-12:   #191919;
+$gray-13:   #0D0D0D;
+$black:     #000000;
+
+
+$grays: (
+  "1": $gray-1,
+  "2": $gray-2,
+  "3": $gray-3,
+  "4": $gray-4,
+  "5": $gray-5,
+  "6": $gray-6,
+  "7": $gray-7,
+  "8": $gray-8,
+  "9": $gray-9,
+  "10": $gray-10,
+  "11": $gray-11,
+  "12": $gray-12,
+  "13": $gray-13
+);
+
+$error:     #E34850;
+$link: #3477DB;
+//font weight
+$font-weight-thin:       100;
+$font-weight-light:      300;
+$font-weight-regular:    400;
+$font-weight-medium:     500;
+$font-weight-bold:       700;
+$font-weight-black:      900;
+
+//font size
+$font-size-4xsmall:      6px;
+$font-size-3xsmall:      8px;
+$font-size-2xsmall:      10px;
+$font-size-xsmall:       12px;
+$font-size-small:        14px;
+$font-size-normal:       16px;
+$font-size-large:        18px;
+$font-size-xlarge:       20px;
+$font-size-2xlarge:      22px;
+$font-size-3xlarge:      24px;
+$font-size-4xlarge:      26px;
+$font-size-5xlarge:      28px;
+
+//font family
+$font-family: 'NotoSansKR', sans-serif;
+$font-family-serif: 'Noto Serif KR', sans-serif;
+
+//loader
+$loader-color1:#E5E5E5;
+$loader-color2:#F2F2F2;
+$loader-color3:#F7F7F7;
+$loader-color4:#E5E5E560;
+$loader-color5:#F2F2F260;
+$loader-color6:#F7F7F760;

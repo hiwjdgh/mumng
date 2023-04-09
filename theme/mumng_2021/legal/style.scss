@@ -1,0 +1,83 @@
+@import "../../../root/css/scss/variables";
+@import "../../../root/css/scss/mixins";
+/* 정책 페이지 */
+#legal{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    min-height: 100%;
+    padding-top: 58px;
+    padding-bottom: 36px;
+    box-sizing: border-box;
+    background-color: $white;
+
+    #legal__header{
+        display: flex;
+        flex-direction: column;
+
+        #legal__title{
+            line-height: 27px;
+            font-weight: $font-weight-medium;
+            color: $gray-12;
+            font-size: $font-size-large;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        #legal__tab{
+            display: flex;
+            align-items: center;
+            gap: 0 16px;
+            margin-bottom: 72px;
+            .legal__tab-item{
+                a{
+                    line-height: 36px;
+                    font-weight: $font-weight-bold;
+                    color: $gray-5;
+                    font-size: 24px;
+                }
+
+                &.current{
+                    a{
+                        color: $gray-11;
+                    }
+                }
+            }
+        }
+        
+    }
+
+    #legal__content{
+        padding-bottom: 100px;
+        #legal__content-title{
+            line-height: 24px;
+            font-weight: $font-weight-bold;
+            color: $gray-12;
+            font-size: $font-size-normal;
+            margin-bottom: 20px;
+        }
+
+        .legal__section{
+            margin-bottom: 40px;
+            .legal__section-title{
+                line-height: 27px;
+                font-weight: $font-weight-bold;
+                color: $gray-12;
+                font-size: $font-size-large;
+            }
+        }
+        dl {
+            dt {padding-top:20px; font-size: $font-size-normal; font-weight: $font-weight-medium;}
+            dd {padding:2% 0; line-height:140%; font-size: $font-size-small; font-weight: $font-weight-regular;}
+            dd ol > li {list-style-type:decimal; margin:1% 0 0 30px; line-height:140%;}
+            dd ul > li {list-style-type:disc; margin:1% 0 1% 2%; line-height:140%;}
+            dd .lst_no > li {list-style:none; margin-left:0;}
+            dd table {margin-top:2%; width:100%;}
+            dd thead th {border:1px solid $gray-4; background-color: $gray-3; color: $gray-13; padding:15px; font-weight: $font-weight-bold; text-align:center;}
+            dd tbody th {text-align:center; border:1px solid $gray-4;}
+            dd tbody td {border:1px solid $gray-4; padding:15px; text-align:center; vertical-align: middle;}
+        }
+    }
+}

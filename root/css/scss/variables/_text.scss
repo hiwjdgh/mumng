@@ -1,0 +1,54 @@
+$text-color-values: (
+    "g1": (#FCFCFC,#F7F7F7),
+    "g2": (#F7F7F7,#F2F2F2),
+    "g3": (#F2F2F2,#E5E5E5),
+    "g4": (#E5E5E5,#CCCCCC),
+    "g5": (#CCCCCC,#B2B2B2),
+    "g6": (#B2B2B2,#999999),
+    "g7": (#999999,#7F7F7F),
+    "g8": (#7F7F7F,#666666),
+    "g9": (#666666,#4C4C4C),
+    "g10": (#4C4C4C,#333333),
+    "g11": (#333333,#191919),
+    "g12": (#191919,#0D0D0D),
+    "g13": (#0D0D0D,#000000)
+);
+
+$text-color-values2: (
+    "white": #FFFFFF,
+    "error": #E34850,
+    "black": #000000,
+);
+
+$text-weight-values: (
+    "thin": 100,
+    "light": 300,
+    "regular": 400,
+    "medium": 500,
+    "bold": 700,
+    "black": 900
+);
+
+$text-size-values: (
+    "xxsmall": 10px,
+    "xsmall": 12px,
+    "small": 14px,
+    "normal": 16px,
+    "large": 18px,
+    "lgx2": 20px,
+    "lgx3": 22px,
+    "lgx4": 24px,
+    "lgx5": 26px
+);
+
+$text-align-values: (
+    "left": left,
+    "right": right,
+    "center": center
+);
+
+$text-decoration-values: (
+    "overline" : overline,
+    "line-through" : line-through,
+    "underline" : underline,
+);

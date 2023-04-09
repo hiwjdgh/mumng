@@ -1,0 +1,226 @@
+.text-badge-t1{
+    display: inline-flex;
+    min-width: 30px;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    padding: 2px 0;
+    background-color: $gray-12;
+    border-radius: 10px;
+    line-height: 15px;
+    font-weight: $font-weight-medium;
+    color: $white;
+    font-size: $font-size-2xsmall;
+}
+.text-badge-t2{
+    display: inline-flex;
+    min-width: 30px;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    padding: 2px 0;
+    background-color: $gray-4;
+    border-radius: 10px;
+    line-height: 15px;
+    font-weight: $font-weight-medium;
+    color: $gray-7;
+    font-size: $font-size-2xsmall;
+}
+.text-badge-t3{
+    display: inline-flex;
+    min-width: 30px;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    padding: 2px 0;
+    border: 1px solid $gray-10;
+    box-sizing: border-box;
+    background-color: $white;
+    border-radius: 10px;
+    line-height: 15px;
+    font-weight: $font-weight-medium;
+    color: $gray-12;
+    font-size: $font-size-2xsmall;
+}
+
+.calendar-badge{
+    display: inline-flex;
+    min-width: 30px;
+    align-items: center;
+    border: 1px solid $gray-4;
+    padding: 4px;
+    border-radius: 16px;
+    box-sizing: border-box;
+    .calendar-badge__state{
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        border: 1px solid $gray-4;
+        border-radius: 50%;
+        box-sizing: border-box;
+        background-color: $gray-5;
+    }
+
+    .calendar-badge__text{
+        line-height: 18px;
+        font-weight: $font-weight-regular;
+        color: $gray-12;
+        font-size: $font-size-xsmall;
+        margin-left: 6px;
+        margin-right: 6px;
+
+        &.delay{
+            color: red;
+        }
+    }
+
+    .calendar-badge__text2{
+        position: relative;
+        max-width: 88px;
+        line-height: 18px;
+        font-weight: $font-weight-regular;
+        color: $gray-7;
+        font-size: $font-size-xsmall;
+        padding-left: 6px;
+        padding-right: 12px;
+        &::before{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 9px;
+            background-color: $gray-4;
+        }
+    }
+}
+
+.update-badge{
+    display: inline-flex;
+    min-width: 30px;
+    align-items: center;
+    justify-content: center;
+    background-color: $gray-11;
+    padding: 1px 4px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    line-height: 15px;
+    font-weight: $font-weight-bold;
+    color: $white;
+    font-size: $font-size-2xsmall;
+}
+
+.new-badge{
+    display: inline-flex;
+    min-width: 30px;
+    align-items: center;
+    justify-content: center;
+    background-color: #E34850;
+    padding: 1px 4px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    line-height: 15px;
+    font-weight: $font-weight-bold;
+    color: $white;
+    font-size: $font-size-2xsmall;
+
+    &.small{
+        min-width: none;
+        padding: 0 3px;
+        border-radius: 5px;
+        line-height: 10px;
+        font-weight: $font-weight-bold;
+        color: $white;
+        font-size: 6px;
+    }
+}
+
+.stop-badge{
+    display: inline-flex;
+    min-width: 30px;
+    align-items: center;
+    justify-content: center;
+    background-color: $gray-5;
+    padding: 1px 4px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    line-height: 15px;
+    font-weight: $font-weight-bold;
+    color: $white;
+    font-size: $font-size-2xsmall;
+}
+
+.end-badge{
+    display: inline-flex;
+    min-width: 30px;
+    align-items: center;
+    justify-content: center;
+    background-color: $white;
+    padding: 0px 4px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    line-height: 15px;
+    font-weight: $font-weight-bold;
+    border: 1px solid $gray-11;
+    color: $gray-11;
+    font-size: $font-size-2xsmall;
+}
+
+.best-badge{
+    display: inline-flex;
+    min-width: 30px;
+    align-items: center;
+    justify-content: center;
+    background-color: $gray-10;
+    padding: 0 3px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    line-height: 15px;
+    font-weight: $font-weight-bold;
+    color: $white;
+    font-size: $font-size-2xsmall;
+}
+
+.event-badge{
+    display: inline-flex;
+    min-width: 30px;
+    align-items: center;
+    justify-content: center;
+    background-color: $gray-11;
+    padding: 0 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    line-height: 15px;
+    font-weight: $font-weight-black;
+    color: $white;
+    font-size: $font-size-2xsmall;
+}
+
+.badge{
+    display: inline-block;
+    padding: 2px 12px;
+    text-align: center;
+    border-radius: 10px;
+    line-height: 15px;
+    font-weight: $font-weight-medium;
+    color: $white;
+    font-size: $font-size-2xsmall;
+    &--t1{
+        color: $white;
+        background-color: $gray-12;
+        border: 1px solid $gray-12;
+    }
+
+    &--t2{
+        color: $gray-7;
+        background-color: $gray-4;
+        border: 1px solid $gray-4;
+    }
+
+    &--t3{
+        color: $gray-12;
+        background-color: $white;
+        border: 1px solid $gray-12;
+    }
+}

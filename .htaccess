@@ -1,0 +1,26 @@
+Options -MultiViews
+RewriteEngine On
+Options -Indexes
+
+# Protect application and system files from being viewed
+# RewriteCond %{REQUEST_URI} !(/root/js/$)
+# RewriteRule ^(root) - [F,L]
+
+# Allow any files or directories that exist to be displayed directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite all other URLs to index.php/
+RewriteRule ^(.*)$ /index.php?request=$1 [QSA,L]
+
+RewriteRule ^work/detail/([0-9a-z]{20})/([0-9]*)$ ./index.php?work_id=$1&page=$2 [L]
+RewriteRule ^work/list/(webtoon|novel)$ ./index.php?work_grp_id=$1 [L]
+RewriteRule ^work/epsd/([0-9a-z]{20})/([0-9]*)$ ./index.php?work_id=$1&epsd_id=$2 [L]
+
+#검색 페이지
+RewriteRule ^search/(webtoon|novel|user|hashtag|tags)/[^/]*$ ./index.php?search_type=$1&search_keyword=$2 [L]
+
+
+
+#서재 페이지
+RewriteRule ^library/(subscribe|latest|pay|like|comment)$ ./index.php [L]

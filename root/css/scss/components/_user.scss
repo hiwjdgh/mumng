@@ -1,0 +1,148 @@
+.user{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    &__link{
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    &__img-box{
+        display: flex;
+        align-items: center;
+    }
+
+    &__img{
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 1px solid $gray-4;
+        box-sizing: border-box;
+        
+    }
+
+    &__nick{
+        @include text-size(0.75rem);
+        @include text-weight($font-weight-regular);
+        @include text-color($gray-10);
+    }
+
+    &__field{
+        @include text-size(0.625rem);
+        @include text-weight($font-weight-regular);
+        @include text-color($gray-7);
+    }
+
+    
+    &.lg{
+        .user__link{
+            gap: 12px;
+        }
+        .user__img{
+            width: 48px;
+            height: 48px; 
+        }
+    }
+
+    &.xl{
+        .user__link{
+            gap: 12px;
+        }
+        .user__img{
+            width: 60px;
+            height: 60px; 
+        }
+    }
+    &.xxl{
+        .user__link{
+            gap: 12px;
+        }
+        .user__img{
+            width: 96px;
+            height: 96px; 
+        }
+    }
+    &.xxxl{
+        .user__link{
+            gap: 12px;
+        }
+        .user__img{
+            width: 160px;
+            height: 160px; 
+        }
+    }
+
+}
+
+
+.users{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    &__link{
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    &__img-box{
+        display: flex;
+        align-items: center;
+    }
+
+    &__img{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid $gray-4;
+        box-sizing: border-box;
+    }
+
+    &__nick{
+        @include text-size(0.75rem);
+        @include text-weight($font-weight-medium);
+        @include text-color($gray-10);
+    }
+
+
+    &.lg{
+        .user__link{
+            gap: 12px;
+        }
+        .user__img{
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    &.multiple{
+        .user__link{
+            gap: 4px;
+        }
+        .user__img-box{
+            direction: rtl;  /* This is to get the stack with left on top */
+            padding-left: 10px;  /* Same value as the negative margin */
+        }
+
+        .user__img{
+            margin-left: -10px;
+        }
+
+        &.lg{
+            .user__img-box{
+                direction: rtl;  /* This is to get the stack with left on top */
+                padding-left: 20px;  /* Same value as the negative margin */
+            }
+
+            .user__img{
+                margin-left: -20px;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,35 @@
+@each $size, $value in $margin-values {
+    .mg-#{$size} {
+      @include margin($value, $value);
+    }
+  }
+@each $size, $value in $margin-values {
+    .mgt-#{$size} {
+      @include margin-top($value);
+    }
+  }
+@each $size, $value in $margin-values {
+    .mgr-#{$size} {
+      @include margin-right($value);
+    }
+  }
+@each $size, $value in $margin-values {
+    .mgb-#{$size} {
+      @include margin-bottom($value);
+    }
+  }
+@each $size, $value in $margin-values {
+    .mgl-#{$size} {
+      @include margin-left($value);
+    }
+  }
+@each $size, $value in $margin-values {
+    .mgvt-#{$size} {
+      @include margin-vt($value, $value);
+    }
+  }
+@each $size, $value in $margin-values {
+    .mghz-#{$size} {
+      @include margin-hz($value, $value);
+    }
+  }

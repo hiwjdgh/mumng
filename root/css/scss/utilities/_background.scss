@@ -1,0 +1,5 @@
+@each $color, $value in $background-color-values {
+    .bg-#{$color} {
+      @include background-color($value);
+    }
+}

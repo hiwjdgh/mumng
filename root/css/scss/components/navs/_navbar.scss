@@ -1,0 +1,141 @@
+.navbar{
+    position: relative;
+    background-color: $gray-1;
+    box-sizing: border-box;
+   
+
+    &.left{
+        width: 460px;
+        padding-right: 306px;
+    }
+
+    &.fixed{
+        position: fixed;
+        top: 3.625rem;
+        left: 0;
+        right: 0;
+        z-index: 999;
+
+        &.left{
+            right: auto;
+        }
+    
+        &.right{
+            left: auto;
+        }
+    
+        &.bottom{
+            top: auto;
+            bottom: 0;
+        }
+    }
+
+    @include media-breakpoint-up(tablet, $breakpoints){
+
+        &.fixed{
+            &.left{
+                bottom: 2.25rem;
+            }
+        }
+    }
+
+    &__title{
+        display: inline-block;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 2.125rem;
+        box-sizing: border-box;
+        @include text-size(1.125rem);
+        @include text-weight(bold);
+        @include text-color($gray-12);
+    }
+
+    &__box{
+        height: 100%;
+    }
+
+    &__nav{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__link{
+        position: relative;
+        display: flex;
+        align-items: center;
+        column-gap: 4px;
+        width: 100%;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        padding-left: 2.125rem;
+        box-sizing: border-box;
+        @include text-size(1rem);
+        @include text-weight($font-weight-medium);
+        @include text-color($gray-11);
+        transition: all 0.2s;
+
+        &.current{
+            background-color: $gray-2;
+            @include text-weight($font-weight-bold);
+
+            ~ .navbar__nav2{
+                display: flex;
+            }
+        }
+
+        &:not(.current):hover{
+            background-color: $gray-2;
+        }
+    }
+
+    &__nav2{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 153px;
+        display: none;
+        flex-direction: column;
+        width: 306px;
+        @include border-left(1px, solid, $gray-4);
+        @include border-right(1px, solid, $gray-4);
+        box-sizing: border-box;
+        background-color: $white;
+    }
+
+    &__link2{
+        position: relative;
+        display: flex;
+        align-items: center;
+        column-gap: 4px;
+        width: 100%;
+        padding: 0.625rem 1rem;
+        box-sizing: border-box;
+        @include text-size(1.125rem);
+        @include text-weight($font-weight-medium);
+        @include text-color($gray-11);
+        transition: all 0.2s;
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+            width: 2px;
+            height: 47px;
+            background-color: $gray-12;
+        }
+
+
+        &.current{
+            background-color: $gray-2;
+            @include text-weight($font-weight-bold);
+            &::before{
+                display: block;
+            }
+        }
+
+        &:not(.current):hover{
+            background-color: $gray-2;
+        }
+    }
+}

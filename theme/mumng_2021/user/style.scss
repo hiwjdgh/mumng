@@ -1,0 +1,335 @@
+@import "../../../root/css/scss/variables";
+@import "../../../root/css/scss/mixins";
+/* 회원가입 페이지  */
+#reg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 360px;
+    padding-top: 90px;
+    padding-bottom: 70px;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    #reg__step-box{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 22px;
+        box-sizing: border-box;
+        margin-bottom: 48px;
+
+        #reg__step-title{
+            position: relative;
+            line-height: 42px;
+            font-weight: $font-weight-bold;
+            color: $gray-12;
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        #reg__step-line{
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: $gray-4;
+            margin-bottom: 12px;
+
+            &.step1{
+                #reg__step-line-slider{
+                    width: 33.33%;
+                }
+            }
+            &.step2,
+            &.step3{
+                #reg__step-line-slider{
+                    width: 66.66%;
+                }
+            }
+            &.step4{
+                #reg__step-line-slider{
+                    width: 100%;
+                }
+            }
+            #reg__step-line-slider{
+                display: block;
+                width: 0%;
+                height: 2px;
+                background-color: $gray-11;
+                transition: width 0.5s ease-in-out;
+            }
+        }
+
+        #reg__step-msg-box{
+            display: flex;
+            align-items: center;
+
+            .reg__step-msg{
+                display: none;
+                line-height: 20px;
+                font-weight: $font-weight-regular;
+                color: $gray-12;
+                font-size: $font-size-small;
+                margin-right: 4px;
+            }
+
+            .reg__step-link{
+                display: none;
+                line-height: 20px;
+                font-weight: $font-weight-bold;
+                color: $gray-12;
+                font-size: $font-size-small;
+            }
+
+            &.step1{
+                #reg__step1-msg,
+                #reg__step1-link{
+                    display: inline;
+                }
+            }
+            &.step2{
+                #reg__step2-msg{
+                    display: inline;
+                }
+            }
+            &.step3{
+                #reg__step3-msg{
+                    display: inline;
+                }
+            }
+            &.step4{
+                #reg__step4-msg{
+                    display: inline;
+                }
+            }
+
+            &.step5{
+                #reg__step5-msg{
+                    display: inline;
+                }
+            }
+        }
+    }
+
+
+    #reg__form{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 22px;
+        box-sizing: border-box;
+    }
+
+    .reg_step_button{
+        font-weight: $font-weight-bold;
+        color: #333333;
+        font-size: $font-size-large;
+        margin-left: auto;
+
+        &.disabled{
+            pointer-events: none;
+            color: #E5E5E5;
+        }
+    }
+}
+/* 로그인 페이지 */
+#login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 360px;
+    min-height: 100%;
+    margin: 0 auto;
+    padding-top: 108px;
+    padding-bottom: 86px;
+    box-sizing: border-box;
+
+    form,fieldset{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    #login__form{
+        width: 100%;
+        margin-bottom: 54px;
+        padding: 0 22px;
+        box-sizing: border-box;
+    }
+
+    #login__title{
+        line-height: 41px;
+        font-weight: $font-weight-black;
+        color: $gray-12;
+        font-size: 28px;
+        margin-bottom: 60px;
+    }
+
+    #login__id,
+    #login__pwd{
+        margin-bottom: 34px;
+    }
+
+    #login__submit{
+        margin-bottom: 20px;
+    }
+
+    #login__more{
+        display: flex;
+        align-items: center;
+        margin-bottom: 54px;
+        #login__more-id,
+        #login__more-pwd{
+            line-height: 18px;
+            font-weight: $font-weight-medium;
+            color: $gray-7;
+            font-size: $font-size-xsmall;
+            margin-right: 11px;
+            
+            &:hover{
+                color: #7F7F7F;
+            }
+        }
+
+        #login__more-auto{
+            margin-left: auto;
+
+            .check-box__label{
+                line-height: 18px;
+                font-weight: $font-weight-medium;
+                color: $gray-7;
+                font-size: $font-size-xsmall;
+
+            }
+        }   
+    }
+
+    #login__reg{
+        text-align:center;
+
+        #login__reg-msg01{
+            line-height: 20px;
+            font-weight: $font-weight-regular;
+            color: $gray-12;
+            font-size: $font-size-small;
+            margin-right: 4px;
+        }
+        #login__reg-msg02{
+            line-height: 20px;
+            font-weight: $font-weight-bold;
+            color: $gray-12;
+            font-size: $font-size-small;
+        }
+    }
+
+    #login__ad{
+        width:100%;
+        max-width: 360px;
+        background-color:$gray-2;
+        border:1px solid $gray-4;
+        box-sizing: border-box;
+    }
+}
+
+/* 아이디 비밀번호 찾기 페이지 */
+#find{
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    padding-top: 118px;
+    padding-bottom: 70px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+#pwd-update{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 360px;
+    height: 100%;
+
+    form,fieldset{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    #pwd-update__form{
+        width: 100%;
+        padding: 0 22px;
+        box-sizing: border-box;
+    }
+
+    #pwd-update__title{
+        line-height: 28px;
+        font-weight: $font-weight-bold;
+        color: #191919;
+        font-size: $font-size-large;
+        margin-bottom: 48px;
+    }
+
+    #pwd-update__pwd{
+        margin-bottom: 16px;
+
+        
+        &.input-box--invalid{
+            .input-box__msg{
+                color: #E34850;
+            }
+        }
+        
+    }
+
+    #pwd-update__pwd-re{
+        margin-bottom: 60px;
+
+        &.input-box--invalid{
+            .input-box__msg{
+                color: #E34850;
+            }
+        }
+    }
+}
+
+/* 내 창작 페이지 */
+
+.user_creation{
+    display: flex;
+    
+
+    &__content{
+        width: 100%;
+        max-width: 1000px;
+        min-height: 100vh;
+        padding: 1.875rem 1.25rem 3.875rem 1.25rem;
+        box-sizing: border-box;
+        @include border-right(1px, solid, $gray-4);
+
+        &-header{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1.25rem;
+        }
+
+        &-title{
+            @include text-size(1.125rem);
+            @include text-weight($font-weight-medium);
+            @include text-color($gray-12);
+            margin-bottom: 0.5rem;
+        }
+
+        &-description{
+            @include text-size(0.875rem);
+            @include text-weight($font-weight-regular);
+            @include text-color($gray-12);
+        }
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+    }
+}

@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'mumng-icon';
+    src: url('./mumng-icon.eot');
+    src: url('./mumng-icon.woff2') format('woff2'),
+         url('./mumng-icon.woff') format('woff'),
+         url('./mumng-icon.ttf') format('truetype'),
+         url('./mumng-icon.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+  /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+  /*
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+      font-family: 'fontello';
+      src: url('../font/fontello.svg?33020091#fontello') format('svg');
+    }
+  }
+  */
+  [class^="ic-"]:before, [class*=" ic-"]:before {
+    font-family: "mumng-icon";
+    font-style: normal;
+    font-weight: normal;
+    speak: never;
+  
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+  
+    line-height: 1em;
+  
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  
+  }
+  
+.ic-mumng-commerce:before { content: '\e800'; }
+.ic-plus:before { content: '\e801'; }
+.ic-checked:before { content: '\e802'; }

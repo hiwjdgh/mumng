@@ -1,0 +1,11 @@
+.collapse-button{
+
+}
+
+.collapse-content{
+    display: none;
+
+    &.show{
+        display: block;
+    }
+}

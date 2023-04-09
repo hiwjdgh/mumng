@@ -1,0 +1,169 @@
+@import "../../../root/css/scss/variables";
+@import "../../../root/css/scss/mixins";
+/* 작품 페이지 */
+.work{
+    display: flex;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    min-height: 100%;
+    flex-direction: column;
+    padding: 44px 34px 20px 34px;
+    box-sizing: border-box;
+
+    &__day{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        &-list{
+            display: flex;
+            gap: 0 8px;
+        
+        }
+
+        &-item{
+            display: inline-flex;
+            width: 46px;
+            height: 46px;
+            align-items: center;
+            justify-content: center;
+            line-height: 24px;
+            font-weight: $font-weight-bold;
+            color: $gray-5;
+            font-size: $font-size-normal;
+            background-color: $gray-1;
+            border-radius: 50%;
+            transition: color,background-color 0.2s;
+            cursor: pointer;
+            
+            &:hover{
+                color: $gray-6;
+                background-color: $gray-2;
+            }
+            
+            &.current{
+                background-color: $gray-11;
+                color: $white;
+            }
+        }
+    }
+
+    &__filter{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 24px;
+        &-inner-box{
+            position: relative;
+            display: flex;
+            align-items: baseline;
+
+            @media screen and (max-width: 1440px) {
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__type{
+        display: flex;
+        z-index: 1;
+
+        @media screen and (max-width: 1440px) {
+            margin-bottom: 12px;
+        }
+
+        &-list{
+            display: flex;
+            align-items: center;
+            gap: 0 20px;
+        }
+
+        &-item{
+            line-height: 42px;
+            font-weight: $font-weight-bold;
+            color: $gray-5;
+            font-size: $font-size-5xlarge;
+            transition: color 0.2s;
+            cursor: pointer;
+
+            &:hover{
+                color: $gray-6;
+            }
+            
+            &.current{
+                color: $gray-12;
+            }
+        }
+
+    }
+
+    &__genre{
+        position: absolute;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (max-width: 1440px) {
+            position: static;
+            left: auto;
+            bottom: auto;
+            transform: none;
+            justify-content: flex-start;
+        }
+        
+        &-list{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0 16px;
+        }
+
+        &-item{
+            line-height: 27px;
+            font-weight: $font-weight-bold;
+            color: $gray-5;
+            font-size: $font-size-large;
+            transition: color 0.2s;
+            cursor: pointer;
+
+            &:hover{
+                color: $gray-6;
+            }
+            
+            &.current{
+                color: $gray-12;
+            }
+
+        }
+    }
+
+    &__list-box{
+        position: relative;
+        flex: 1;
+    }
+
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 20px;
+
+        .webtoon-item{
+            @media screen and (max-width:1440px) {
+                max-width: 25%;
+                flex: 0 0 calc(25% - 20px);
+            }
+            @media screen and (max-width:1024px) {
+                max-width: 33.333%;
+                flex: 0 0 calc(33.333% - 20px);
+            }
+            @media screen and (max-width:768px) {
+                max-width: 50%;
+                flex: 0 0 calc(50% - 20px);
+            }
+        }
+    }
+}

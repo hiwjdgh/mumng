@@ -1,0 +1,35 @@
+@each $size, $value in $padding-values {
+    .pd-#{$size} {
+      @include padding($value, $value);
+    }
+  }
+@each $size, $value in $padding-values {
+    .pdt-#{$size} {
+      @include padding-top($value);
+    }
+  }
+@each $size, $value in $padding-values {
+    .pdr-#{$size} {
+      @include padding-right($value);
+    }
+  }
+@each $size, $value in $padding-values {
+    .pdb-#{$size} {
+      @include padding-bottom($value);
+    }
+  }
+@each $size, $value in $padding-values {
+    .pdl-#{$size} {
+      @include padding-left($value);
+    }
+  }
+@each $size, $value in $padding-values {
+    .pdvt-#{$size} {
+      @include padding-vt($value, $value);
+    }
+  }
+@each $size, $value in $padding-values {
+    .pdhz-#{$size} {
+      @include padding-hz($value, $value);
+    }
+  }

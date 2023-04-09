@@ -1,0 +1,261 @@
+@import "../../../root/css/scss/variables";
+@import "../../../root/css/scss/mixins";
+/* 창작 페이지 */
+.creation{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 100%;
+    padding: 0 36px ;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+    }
+
+    &__title{
+        line-height: 42px;
+        font-weight: $font-weight-bold;
+        color: $gray-12;
+        font-size: $font-size-5xlarge;
+    }
+
+    &__left{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: sticky;
+        width: 260px;
+        border: 1px solid $gray-4;
+        border-radius: 6px;
+        box-sizing: border-box;
+        z-index: 1;
+        &-header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px;
+            border-bottom: 1px solid $gray-4;
+            box-sizing: border-box;
+        }
+
+        &-title{
+            line-height: 27px;
+            font-weight: $font-weight-medium;
+            color: $gray-12;
+            font-size: $font-size-large;
+        }
+    }
+
+    &__filter{
+        display: flex;
+        flex-direction: column;
+        
+        &-item{
+            display: flex;
+            flex-direction: column;
+            padding: 16px;
+            border-bottom: 1px solid $gray-4;
+            box-sizing: border-box;
+
+            &:last-child{
+                border-bottom: 0;
+            }
+        }
+
+        &-title{
+            line-height: 24px;
+            font-weight: $font-weight-medium;
+            color: $gray-12;
+            font-size: $font-size-normal;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__filter2{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        &-item2{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 35px;
+        }
+    }
+
+    &__right{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: calc(100% - 260px);
+    }
+
+    /* 창작 리스트 */
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        column-gap: 36px;
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        row-gap: 24px;
+    }
+
+    &__pagination{
+        margin-top: 60px;
+    }
+
+    /* 창작 상세 */
+    &-detail{
+
+        &__header{
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 16px 0;
+            border-bottom: 1px solid $gray-4;
+            box-sizing: border-box;
+            margin-bottom: 24px;
+        }
+    
+        &__title{
+            line-height: 42px;
+            font-weight: $font-weight-bold;
+            color: $gray-12;
+            font-size: $font-size-5xlarge;
+        }
+
+        &__date{
+            line-height: 24px;
+            font-weight: $font-weight-medium;
+            color: $gray-12;
+            font-size: $font-size-normal;
+        }
+
+        &__content{
+            display: flex;
+            width: 100%;
+            gap: 16px;
+        }
+
+        &__left{
+            display: flex;
+            flex-direction: column;
+            width: calc(100% - 260px);
+            gap: 16px;
+
+        }
+
+        &__right{
+            position: sticky;
+            top: 100px;
+            align-self: flex-start;
+            display: flex;
+            flex-direction: column;
+            width: 260px;
+            gap: 16px;
+          
+        }
+
+        &__require{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 16px;
+            border: 1px solid $gray-4;
+            border-radius: 10px;
+            box-sizing: border-box;
+            gap: 12px;
+            margin: 48px 0;
+            &-title{
+                line-height: 24px;
+                font-weight: $font-weight-medium;
+                color: $gray-12;
+                font-size: $font-size-normal;
+            }
+
+            &-description{
+                line-height: 18px;
+                font-weight: $font-weight-medium;
+                color: $gray-12;
+                font-size: $font-size-xsmall;
+            }
+
+            &-box{
+
+            }
+    
+        }
+
+        &__card{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 16px;
+            border: 1px solid $gray-4;
+            border-radius: 10px;
+            box-sizing: border-box;
+            gap: 12px;
+            
+            &-title{
+                line-height: 24px;
+                font-weight: $font-weight-medium;
+                color: $gray-12;
+                font-size: $font-size-normal;
+            }
+
+            &-description{
+                line-height: 18px;
+                font-weight: $font-weight-medium;
+                color: $gray-12;
+                font-size: $font-size-xsmall;
+            }
+
+            &-box{
+
+            }
+    
+        }
+
+
+    }
+
+    /* 창작 폼 */
+    &__form{
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+        flex: 1;
+    }
+
+    &__submit{
+        align-self: flex-end;
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+    }
+
+    &__fieldset{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &__receipt{
+        position: sticky;
+        width: 20%;
+        height: calc(100vh - 58px);
+        background-color: rebeccapurple;
+    }
+}

@@ -1,0 +1,31 @@
+@mixin text-color($text-color) {
+    color: nth($text-color, 1);
+    transition: color 0.2s;
+    @if(length($text-color) > 1){
+        @at-root {
+            a#{&},
+            button#{&} {
+                &:hover{
+                    color: nth($text-color, 2);
+                }
+            }
+        }
+      
+    }
+}
+@mixin text-weight($text-weight) {
+    font-weight: $text-weight;
+}
+
+@mixin text-size($text-size) {
+    font-size: $text-size;
+    line-height: $text-size * 1.5;
+}
+
+@mixin text-align($text-align) {
+    text-align: $text-align;
+}
+
+@mixin text-decoration($text-decoration) {
+    text-decoration: $text-decoration;
+}

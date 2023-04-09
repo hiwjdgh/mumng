@@ -1,0 +1,17 @@
+.genre-button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 54px;
+    height: 24px;
+    border: 1px solid $gray-11;
+    box-sizing: border-box;
+    border-radius: 12px;
+    padding: 0 16px;
+    .genre-button__text{
+        line-height: 18px;
+        font-weight: $font-weight-medium;
+        color: $gray-11;
+        font-size: $font-size-xsmall;
+    }
+}

@@ -1,0 +1,409 @@
+.chip-box{
+    position: relative;
+    display: inline-flex;
+    min-width: 74px;
+    border: 1px solid $gray-4;
+    border-radius: 23px;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 13px;
+    box-sizing: border-box;
+
+    .chip-box__label{
+        line-height: 18px;
+        font-weight: $font-weight-medium;
+        color: $gray-11;
+        font-size: $font-size-xsmall;
+    }
+
+    .chip-box__action{
+        margin-left: 10px;
+    }
+}
+
+.chip-check-box{
+    position: relative;
+    display: inline-flex;
+    min-width: 66px;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    transition: all 0.2s;
+    background-color: $gray-2;
+    border-radius: 16px;
+
+    .chip-check-box__check{
+        display: none;
+    }
+
+    .chip-check-box__label{
+        line-height: 18px;
+        font-weight: $font-weight-medium;
+        color: $gray-7;
+        font-size: $font-size-xsmall;
+    }
+
+    &.focus{
+        background-color: $gray-3;
+
+        .chip-check-box__label{
+            color: $gray-8;
+        }
+    }
+
+    &.checked{
+        background-color: $gray-11;
+
+        .chip-check-box__label{
+            color: $white;
+        }
+    }
+
+    &.readonly{
+
+    }
+}
+
+
+.chip-day-box{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+
+    &:not(.readonly):hover{
+        .chip-day-box__label{
+            color: $gray-8;
+
+            &::before{
+                background-color: $gray-3; 
+            }
+        }
+    }
+
+    .chip-day-box__check{
+        display: none;
+
+        &:checked{
+            ~.chip-day-box__label{
+                color: $white;
+                &::before{
+                    background-color: $gray-11;
+                }
+            }
+        }
+    }
+
+    .chip-day-box__label{
+        line-height: 18px;
+        font-weight: $font-weight-medium;
+        color: $gray-7;
+        font-size: $font-size-xsmall;
+
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: $gray-2;
+            border-radius: 50%;
+            z-index: -1;
+        }
+    }
+
+
+    &-28{
+        width: 28px;
+        height: 28px;
+    }
+}
+
+.chip-radio-box{
+    position: relative;
+    min-width: 66px;
+    
+    &.readonly{
+        cursor: default;
+        pointer-events: none;
+        
+        .chip-radio-box__label{
+            cursor: default;
+            pointer-events: none;
+        }
+    }
+
+    &:hover{
+        &:not(.readonly){
+            .chip-radio-box__label{
+                background-color: $gray-3;
+                color: $gray-8;
+            }
+        }
+    }
+    
+    .chip-radio-box__radio{
+        display: none;
+
+        &:checked{
+            ~.chip-radio-box__label{
+                background-color: $gray-11;
+                color: $white;
+            }
+        }
+    }
+
+    .chip-radio-box__label{
+        display: block;
+        padding: 5px 0;
+        box-sizing: border-box;
+        background-color: $gray-2;
+        border-radius: 16px;
+        line-height: 18px;
+        font-weight: $font-weight-medium;
+        color: $gray-7;
+        font-size: $font-size-xsmall;
+        text-align: center;
+    }
+}
+
+
+/* 일반 칩 */
+.chip{
+    position: relative;
+    display: inline-flex;
+    min-width: 66px;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    transition: all 0.2s;
+    background-color: $gray-2;
+    border-radius: 16px;
+    cursor: pointer;
+
+    .chip__label{
+        line-height: 18px;
+        font-weight: $font-weight-medium;
+        color: $gray-7;
+        font-size: $font-size-xsmall;
+    }
+
+    .chip__action-button{
+        display: none;
+        margin-left: 10px;
+    }
+
+    &.readonly{
+        pointer-events: none;
+        .chip__label{
+            color: $gray-7;
+        }
+    }
+
+    &.checked{
+        background-color: $gray-11;
+
+        .chip__label{
+            color: $white;
+        }
+
+        .chip__action-button{
+            display: block;
+        }
+    }
+
+
+    &:not(.readonly):not(.checked):hover{
+        background-color: $gray-3;
+        .chip__label{
+            color: $gray-8;
+        }
+    }
+}
+
+/* 칩 체크 */
+.chip-check{
+    position: relative;
+    display: inline-flex;
+    min-width: 66px;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    transition: all 0.2s;
+    background-color: $gray-2;
+    border-radius: 16px;
+
+    .chip-check__input{
+        display: none;
+    }
+
+    .chip-check__label{
+        line-height: 18px;
+        font-weight: $font-weight-medium;
+        color: $gray-7;
+        font-size: $font-size-xsmall;
+    }
+
+    &.readonly{
+        pointer-events: none;
+        .chip-check__label{
+            color: $gray-7;
+        }
+    }
+
+    &.checked{
+        background-color: $gray-11;
+
+        .chip-check__label{
+            color: $white;
+        }
+    }
+
+
+    &:not(.readonly):not(.checked):hover{
+        background-color: $gray-3;
+        .check-box__label{
+            color: $gray-8;
+        }
+    }
+}
+
+/* 칩 라디오 */
+.chip-radio{
+    position: relative;
+    display: inline-flex;
+    min-width: 66px;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    transition: all 0.2s;
+    background-color: $gray-2;
+    border-radius: 16px;
+
+    .chip-radio__input{
+        display: none;
+    }
+
+    .chip-radio__label{
+        line-height: 18px;
+        font-weight: $font-weight-medium;
+        color: $gray-7;
+        font-size: $font-size-xsmall;
+    }
+
+    &.readonly{
+        pointer-events: none;
+        .chip-radio__label{
+            color: $gray-7;
+        }
+    }
+
+    &.checked{
+        background-color: $gray-11;
+
+        .chip-radio__label{
+            color: $white;
+        }
+    }
+
+
+    &:not(.readonly):not(.checked):hover{
+        background-color: $gray-3;
+        .check-box__label{
+            color: $gray-8;
+        }
+    }
+}
+
+/* 칩 그룹 */
+.chip-group{
+    display: flex;
+    flex-direction: column;
+
+    .chip-group--default{
+        /* 칩 그룹 */
+        /* js 에서 사용함 (필수) */
+    }
+
+    .chip-group--check{
+        /* 칩 체크 그룹 */
+        /* js 에서 사용함 (필수) */
+    }
+
+    .chip-group--radio{
+        /* 칩 라디오 그룹 */
+        /* js 에서 사용함 (필수) */
+    }
+
+    .chip-group__label{
+        line-height: 24px;
+        font-weight: $font-weight-medium;
+        color: $gray-7;
+        font-size: $font-size-normal;
+        transition: all 0.2s;
+        margin-bottom: 12px;
+    }
+
+    .chip-group__box{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .chip-group__input{
+        /* js 에서 사용함 (필수) */
+    }
+    .chip-group__description{
+        margin-top: 6px;
+        line-height: 16px;
+        font-weight: $font-weight-regular;
+        color: $gray-7;
+        font-size: $font-size-xsmall;
+    }
+
+    &.focus{
+        .chip-group__label{
+            color: $gray-10;
+        }
+    }
+
+    &.readonly{
+        pointer-events: none;
+        .chip-group__label{
+            color: $gray-7;
+        }
+
+        .chip{
+            pointer-events: none;
+            .chip__label{
+                color: $gray-7;
+            }
+        }
+        .chip-check{
+            pointer-events: none;
+            .chip-check__label{
+                color: $gray-7;
+            }
+        }
+        .chip-radio{
+            pointer-events: none;
+            .chip-radio__label{
+                color: $gray-7;
+            }
+        }
+    }
+
+    
+    &:not(.readonly):not(.focus):hover{
+        .chip-group__label{
+            color: $gray-10;
+        }
+    }
+}
