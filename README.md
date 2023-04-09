@@ -4,10 +4,10 @@
 
 ## 스택
 
-Server          : AWS Lightsail(Linux Debian)
-DB              : mysql
-Back-end        : PHP
-Front-end       : HTML5, Sass, Java Script
+Server          : AWS Lightsail(Linux Debian)</br>
+DB              : mysql</br>
+Back-end        : PHP</br>
+Front-end       : HTML5, Sass, Java Script</br>
  
 ### Prerequisites
 
