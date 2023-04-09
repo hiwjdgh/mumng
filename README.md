@@ -8,46 +8,8 @@ Server          : AWS Lightsail(Linux Debian)</br>
 DB              : mysql</br>
 Back-end        : PHP</br>
 Front-end       : HTML5, Sass, Java Script</br>
- 
-### Prerequisites
 
-토마토 소스를 위한 기본적인 준비물입니다.
-
-```
-바질
-```
-```
-엑스트라 버진 오일
-```
-```
-토마토 소스(캔)
-```
-```
-양파
-```
-```
-마늘
-```
-```
-페페론치노
-```
-```
-드라이 로즈마리
-```
-```
-월계수 잎
-```
-```
-소금
-```
-```
-후추
-```
-```
-물
-```
-
-##### 구조
+## 구조
 
 mumng/</br>
 ├── api/</br>
